@@ -79,6 +79,17 @@ img:focus {
 
 details {
     background-color: #0001;
-    margin-left: 20px;
     padding: 10px;
+    padding-left: 20px;
+}
+
+code {
+    padding: 2px;
+}
+
+kbd {
+    background-color: #DDD;
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid #CCC;
 }

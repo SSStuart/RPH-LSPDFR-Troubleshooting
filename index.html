@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/eaaa5bf7be.js" crossorigin="anonymous"></script>
-    <title>RPH/LPDFR Troubleshooting</title>
+    <title>RPH/LSPDFR Troubleshooting</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
     <div class="note">
         <p>
             <i class="fa-solid fa-triangle-exclamation"></i> Le tutoriel de BUG-MAN-FR "<a href="https://youtu.be/V9IkLXpS9qA" target="_blank">Comment installer LSPDFR 0.4.9 avec des Plugins</a>" n'est plus entièrement à jour.<br>
-            Il faut ignorer la partie "Mettre à jour RPH".
+            Il faut ignorer la partie "Mettre à jour <abbr title="Rage Plugin Hook">RPH</abbr>".
         </p>
     </div>
     <section>
@@ -27,7 +27,7 @@
                 <summary><h2 class="typeErreur">1. Version du jeu incompatible</h2></summary>
                 <div class="contDefErreur"  id="unsupportedVersion">
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#unsupportedVersionResolution">[Voir la résolution]</a>
-                    <p>Rage Plugin Hook n'est pas compatible avec la version de GTA 5 installé </p>
+                    <p>Rage Plugin Hook n'est pas compatible avec la version de GTA 5 installé.</p>
                     <img src="pictures/RPH_GameVersionMSG.png" alt="Grand Theft Auto V vX.X.XXX.X Retail NOT SUPPORTED" tabindex="0">
                     (<a href="https://discord.com/channels/202386545829740544/412219162409172992/951132006253723648" target="_blank">Source</a>)
                     <br>
@@ -38,22 +38,34 @@
                     <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
                     <p>Attendre une mise à jour de <abbr title="Rage Plugin Hook">RPH</abbr> sur le <a href="https://ragepluginhook.net/Downloads.aspx?Category=1" target="_blank">site</a>.</p>
                     <details>
-                        <summary>(Si utilisé pour jouer à LSPDFR : réinstaller LSPDFR (manual install) en remplaçant les fichiers)</summary>
+                        <summary>Si utilisé pour jouer à LSPDFR : réinstallez LSPDFR (manual install) en remplaçant les fichiers</summary>
                         <p>
-                            Allez sur <a href="https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response/" target="_blank">lcpdfr.com</a><br>
-                            Cliquez sur "Download this file" puis "Agree & Download"<br>
-                            Cliquez sur le bouton "Download" correspondant à la version <i>Manual_Install</i><br>
-                            Une fois le fichier téléchargé,
-                            <details><summary>Extrayez son contenu dans la racine du jeu</summary>
+                            Allez sur <a href="https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response/" target="_blank">lcpdfr.com</a>.<br>
+                            Cliquez sur "Download this file" puis "Agree & Download".<br>
+                            Cliquez sur le bouton "Download" correspondant à la version <i>Manual_Install</i>.<br>
+                            Une fois le fichier téléchargé, extrayez son contenu dans la racine du jeu.
+                            <details><summary>Comment installer LSPDFR Manual Install ?</summary>
                                 <p>
-                                    Ouvrez l'archive .zip d'un côté, puis ouvrez la racine du jeu de l'autre (dans l'explorateur), puis sélectionner tous les fichiers (<kbd>Ctrl + A</kbd>) de l'archive et cliquez-glissez dans la racine.
+                                    Ouvrez l'archive .zip d'un côté, puis ouvrez la racine du jeu de l'autre (dans l'explorateur), puis sélectionner tous les fichiers (<kbd>Ctrl</kbd>+<kbd>A</kbd>) de l'archive et cliquez-glissez dans la racine.
                                     Remplacez les fichiers déjà existants si demandé.
                                 </p>
                             </details>
                         </p>
                     </details>
+                </div>
             </details>
-            </div>
+
+            <details>
+                <summary><h2 class="typeErreur">Changer le raccourci clavier de la console <abbr title="Rage Plugin Hook">RPH</abbr></h2></summary>
+                <div class="contDefErreur"  id="">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#">[Voir la résolution]</a>
+                    <p>Le changement du raccourci clavier de la console n'est pas enregistré/appliqué.</p>
+                </div>
+                <div class="contResolution" id="">
+                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <p>Lancer GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrir la console (<kbd>F4</kbd> par défaut) et écrire <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).</p>
+                </div>
+            </details>
             
         </div>
     </section>
