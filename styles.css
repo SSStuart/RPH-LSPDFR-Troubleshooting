@@ -1,0 +1,84 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: forestgreen;
+    color: #fff;
+    padding: 10px;
+    font-size: 4vh;
+}
+
+section {
+    margin: 20px;
+}
+
+a {
+    text-decoration-color: #0000ee3d;
+}
+a:hover {
+    text-decoration-color: #0000ee;
+}
+
+.note {
+    margin: 30px;
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+    font-size: large;
+}
+
+h1 {
+    text-decoration: underline 2px darkblue;
+}
+
+h3 {
+    display: inline-block;
+}
+
+.hErreur {
+    color: firebrick;
+}
+.hResolu {
+    color: forestgreen;
+}
+.contDefErreur, .contResolution {
+    padding-left: 10px;
+}
+.contDefErreur {
+    border-left: 5px solid firebrick;
+}
+.contResolution {
+    border-left: 5px solid forestgreen;
+}
+
+.gotoResol {
+    font-size: small;
+}
+
+.typeErreur {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 200px;
+    border: 2px solid gray;
+    cursor: zoom-in;
+    transition: max-height 0.5s ;
+}
+img:focus {
+    max-height: 100vh;
+    cursor: default;
+    transition: max-height 1s ;
+}
+
+details {
+    background-color: #0001;
+    margin-left: 20px;
+    padding: 10px;
+}
