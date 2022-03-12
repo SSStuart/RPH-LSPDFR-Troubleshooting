@@ -131,6 +131,7 @@
     </footer>
     <script>
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
+            var fullscreen = true
             let ErrorString = document.location.href.split('#')[1].split('?')[0];
             let paramString = document.location.href.split('?')[1];
             let queryString = new URLSearchParams(paramString);
@@ -162,7 +163,11 @@
 
         function toggleFullscreen(element) {
             idErreur = element.parentElement.id;
-            location.href += "#"+idErreur+"?fullscreen";
+            if (!fullscreen){
+                location.href += "#"+idErreur+"?fullscreen";
+            } else {
+                location.href = location.href.split('#')[0];
+            }
             location.reload();
         }
 
