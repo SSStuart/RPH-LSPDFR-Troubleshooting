@@ -18,8 +18,9 @@
         <span class="navCat">Rage Plugin Hook</span>
         <a href="#unsupportedVersion">Version du jeu incompatible</a>
         <a href="#consoleKeySaving">Changer le raccourci clavier de la console RPH</a>
+        <a href="#pluginBlocked">Plugin arrêté car il <i>freeze</i> le jeu</a>
         <span class="navCat">LSPDFR</span>
-        
+        <em>Rien pour le moment</em>
     </nav>
 
     <div class="note">
@@ -84,6 +85,34 @@
                     <p>Lancer GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrir la console (<kbd>F4</kbd> par défaut) et écrire <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).</p>
                 </div>
             </details>
+
+            <details>
+                <summary><h2 class="typeErreur">Plugin arrêté car il <i>freeze</i> le jeu</h2></summary>
+                <div class="contDefErreur"  id="pluginBlocked">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#pluginBlockedResolution">[Voir la résolution]</a>
+                    <p><abbr title="Rage Plugin Hook">RPH</abbr> arrête un plugin au chargement du jeu parce qu'il bloque ce dernier.</p>
+                    <img src="pictures/RPH_blockedPlugin.png" alt="WARNING! Plugin '...' was terminated because it caused the game to freeze." tabindex="0">
+                </div>
+                <div class="contResolution" id="pluginBlockedResolution">
+                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <ul>
+                        <li>
+                            Option 1
+                            <p>
+                                Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "General".<br>
+                                Changez la valeur de "Plugin timeout threshold" à <code>60000</code> (60 secondes).
+                            </p>
+                        </li>
+                        <li>
+                            Option 2
+                            <p>
+                                Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "Plugins".<br>
+                                Sélectionnez "Don't load any plugins on startup".
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </details>
             
         </div>
     </section>
@@ -91,11 +120,38 @@
     <section hidden>
         <h1>LSPDFR</h1>
     </section>
+
+    <template>
+        <button class="fullscreenBtn" onclick="toggleFullscreen(this)"><i class="fa-solid fa-expand"></i></button>
+    </template>
+    
+
     <footer>
         Créer par SSStuart#0046 pour le #need-help. Mis à jour le 11 mars 2022
     </footer>
     <script>
+        if (document.location.href.includes('#') && document.location.href.includes('?')) {
+            let ErrorString = document.location.href.split('#')[1].split('?')[0];
+            let paramString = document.location.href.split('?')[1];
+            let queryString = new URLSearchParams(paramString);
+            
+            for (let pair of queryString.entries()) {
+                if (pair[0]=="fullscreen") {
+                    document.getElementById(ErrorString).parentElement.classList.add("fullscreen");
+                    document.getElementById(ErrorString).parentElement.open = true;
+                }
+            }
+        }
+
+        var btnFSTemp = document.querySelector('template');
+        var erreurs = document.getElementsByClassName('contDefErreur');
+        for (erreur=0; erreur<erreurs.length; erreur++) {
+            erreurs[erreur].appendChild(btnFSTemp.content.cloneNode(true));
+            
+        }
+
         var menu = document.querySelector('nav');
+        var btnMenu = document.querySelector('#navBtn');
         function toggleNav() {
             if (menu.classList.contains("open")) {
                 menu.classList.remove("open");
@@ -103,6 +159,13 @@
                 menu.classList.add("open");
             }
         }
+
+        function toggleFullscreen(element) {
+            idErreur = element.parentElement.id;
+            window.location.href += "#"+idErreur+"?fullscreen";
+        }
+
+        
     </script>
 </body>
 </html>
