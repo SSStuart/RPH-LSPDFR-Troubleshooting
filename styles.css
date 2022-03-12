@@ -95,6 +95,10 @@ h3 {
     display: inline-block;
 }
 
+abbr {
+    cursor: help;
+}
+
 section div details {
     margin: 20px 0;
 }
@@ -169,6 +173,10 @@ details {
     background-color: #0001;
     padding: 10px;
     padding-left: 20px;
+}
+
+summary {
+    cursor: pointer;
 }
 
 .fullscreen {
