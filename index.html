@@ -162,7 +162,8 @@
 
         function toggleFullscreen(element) {
             idErreur = element.parentElement.id;
-            window.location.href += "#"+idErreur+"?fullscreen";
+            location.href += "#"+idErreur+"?fullscreen";
+            location.reload();
         }
 
         
