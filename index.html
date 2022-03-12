@@ -167,12 +167,10 @@
                 location.href += "#"+idErreur+"?fullscreen";
                 location.reload();
             } else {
+                location.href = location.href.split("#")[0];
                 document.getElementById(idErreur).parentElement.classList.remove("fullscreen");
             }
-            
         }
-
-        
     </script>
 </body>
 </html>
