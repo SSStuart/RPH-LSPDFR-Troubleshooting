@@ -164,8 +164,10 @@
         function toggleFullscreen(element) {
             idErreur = element.parentElement.id;
             if (!fullscreen){
+                console.log("Not fs");
                 location.href += "#"+idErreur+"?fullscreen";
             } else {
+                console.log("fs");
                 location.href = location.href.split('#')[0];
             }
             location.reload();
