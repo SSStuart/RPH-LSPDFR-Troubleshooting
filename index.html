@@ -162,13 +162,12 @@
         }
 
         function toggleFullscreen(element) {
-            idErreur = element.parentElement.id;
             if (!fullscreen){
-                console.log("Not fs");
+                idErreur = element.parentElement.id;
                 location.href += "#"+idErreur+"?fullscreen";
             } else {
-                console.log("fs");
-                location.href = location.href.split('#')[0];
+                newUrl = location.href.split('#')[0];
+                location.href = newUrl;
             }
             location.reload();
         }
