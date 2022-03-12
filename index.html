@@ -167,7 +167,7 @@
                 location.href += "#"+idErreur+"?fullscreen";
                 location.reload();
             } else {
-                document.getElementById(idErreur).classList.remove("fullscreen");
+                document.getElementById(idErreur).parentElement.classList.remove("fullscreen");
             }
             
         }
