@@ -165,11 +165,11 @@
             if (!fullscreen){
                 idErreur = element.parentElement.id;
                 location.href += "#"+idErreur+"?fullscreen";
+                location.reload();
             } else {
-                newUrl = location.href.split('#')[0];
-                location.href = newUrl;
+                document.getElementById(ErrorString).parentElement.classList.remove("fullscreen");
             }
-            location.reload();
+            
         }
 
         
