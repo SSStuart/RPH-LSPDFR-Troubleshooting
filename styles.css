@@ -87,6 +87,9 @@ a:hover {
     grid-gap: 20px;
     margin: 30px;
 }
+@media screen and (max-device-width: 450px) {
+    #notesContainer {grid-template-columns: 1fr;}
+}
 
 .note {
     padding: 10px;
