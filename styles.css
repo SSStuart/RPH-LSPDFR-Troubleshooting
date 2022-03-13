@@ -90,8 +90,13 @@ a:hover {
 
 .note {
     padding: 10px;
-    background-color: lightgoldenrodyellow;
     font-size: large;
+}
+.note.important {
+    background-color: lightgoldenrodyellow;
+}
+.note.info {
+    background-color: lightcyan;
 }
 
 h1 {
