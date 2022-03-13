@@ -81,8 +81,14 @@ a:hover {
     text-decoration-color: #0000ee;
 }
 
-.note {
+#notesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
     margin: 30px;
+}
+
+.note {
     padding: 10px;
     background-color: lightgoldenrodyellow;
     font-size: large;
