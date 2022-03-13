@@ -91,6 +91,8 @@ a:hover {
 .note {
     padding: 10px;
     font-size: large;
+    display: flex;
+    align-items: center;
 }
 .note.important {
     background-color: lightgoldenrodyellow;
