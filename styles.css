@@ -1,3 +1,7 @@
+:root {
+    --main-green: #4aaf60;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #4aaf60;
+    background-color: var(--main-green);
     color: #fff;
     padding: 10px;
     padding-left: calc(4vh + 20px);
@@ -17,7 +21,7 @@ header {
 }
 
 nav {
-    background-color: #4aaf60;
+    background-color: var(--main-green);
     color: #fff;
     font-size: large;
     position: fixed;
@@ -51,7 +55,7 @@ nav a:hover {
 }
 
 #navBtn {
-    background-color: #4aaf60;
+    background-color: var(--main-green);
     color: #fff;
     height: calc(4vh + 10px);
     width: calc(4vh + 10px);
