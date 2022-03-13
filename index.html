@@ -21,11 +21,13 @@
         <div style="height: 5px;"></div>
         <span class="navCat">Rage Plugin Hook</span>
         <a href="#unsupportedVersion">Version du jeu incompatible</a>
-        <a href="#consoleKeySaving">Changer le raccourci clavier de la console RPH</a>
+        <a href="#insufficientPerm">Permissions insuffisantes ou mauvais antivirus</a>
         <a href="#pluginBlocked">Plugin arrêté car il <i>freeze</i> le jeu</a>
+        <a href="#consoleKeySaving">Changer le raccourci clavier de la console RPH</a>
         <span class="navCat">LSPDFR</span>
         <em>Rien pour le moment</em>
     </nav>
+
     <div id="notesContainer">
         <div class="note info">
             <p>
@@ -40,6 +42,7 @@
             </p>
         </div>
     </div>
+
     <section>
         <h1>Rage Plugin Hook</h1>
         <div>
@@ -80,14 +83,49 @@
             </details>
 
             <details>
-                <summary><h2 class="typeErreur">Changer le raccourci clavier de la console <abbr title="Rage Plugin Hook">RPH</abbr></h2></summary>
-                <div class="contDefErreur"  id="consoleKeySaving">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#consoleKeySavingResolution">[Voir la résolution]</a>
-                    <p>Le changement du raccourci clavier de la console n'est pas enregistré/appliqué.</p>
+                <summary><h2 class="typeErreur">Permissions insuffisantes ou mauvais antivirus</h2></summary>
+                <div class="contDefErreur"  id="insufficientPerm">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#insufficientPermResolution">[Voir la résolution]</a>
+                    <ul>
+                        <li>
+                            <p>
+                                <abbr title="Rage Plugin Hook">RPH</abbr> n'est pas installé au bon endroit.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                L'antivirus bloque des fichiers dans la racine du jeu.
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="imgWithCredit">
+                        <img src="pictures/RPH_insufficientPerm.png" alt="Could not hook game process. Insufficient permissions or bad anti-virus" tabindex="0">
+                        <span>(Image de <i>kiwiw#7986</i>)</span>
+                    </div>
                 </div>
-                <div class="contResolution" id="consoleKeySavingResolution">
+                <div class="contResolution" id="insufficientPermResolution">
                     <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
-                    <p>Lancez GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrez la console (<kbd>F4</kbd> par défaut) et écrivez <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).</p>
+                    <ul>
+                        <li>
+                            Option 1
+                            <p>
+                                Vérifiez que vous exécutez le <code>RAGEPluginHook.exe</code> dans la racine du jeu.
+                            </p>
+                        </li>
+                        <li>
+                            Option 2
+                            <p>
+                                Lancez GTA 5, puis une fois en jeu (mode histoire, prologue fini au minimum) lancez <abbr title="Rage Plugin Hook">RPH</abbr>.
+                            </p>
+                        </li>
+                        <li>
+                            Option 3
+                            <p>
+                                Faites un clique-droit sur le dossier du jeu > "Propriétés" > onglet "Sécurité" > "Modifier..." > pour chaque utilisateurs cocher la case "Contrôle total" sous "Autoriser", puis "Appliquer".
+                            </p>
+                            <img src="pictures/RPH_insufficientPermResol.png" alt="" tabindex="0">
+                        </li>
+                    </ul>
                 </div>
             </details>
 
@@ -120,7 +158,19 @@
                     </ul>
                 </div>
             </details>
-            
+
+            <details>
+                <summary><h2 class="typeErreur">Changer le raccourci clavier de la console <abbr title="Rage Plugin Hook">RPH</abbr></h2></summary>
+                <div class="contDefErreur"  id="consoleKeySaving">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#consoleKeySavingResolution">[Voir la résolution]</a>
+                    <p>Le changement du raccourci clavier de la console n'est pas enregistré/appliqué.</p>
+                </div>
+                <div class="contResolution" id="consoleKeySavingResolution">
+                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <p>Lancez GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrez la console (<kbd>F4</kbd> par défaut) et écrivez <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).</p>
+                </div>
+            </details>
+
         </div>
     </section>
     
@@ -134,7 +184,7 @@
     
 
     <footer>
-        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 12 mars 2022
+        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 13 mars 2022
     </footer>
     <script>
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
