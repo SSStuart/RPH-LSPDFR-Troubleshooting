@@ -32,14 +32,16 @@ header {
 #navOverlay.open {
     left: 0;
     right: 0;
-    overflow: auto;
 }
 
 nav {
     background-color: var(--main-green);
     color: #fff;
     font-size: large;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
     width: 20ch;
     max-width: 100%;
     padding: max(40px, 5vw);
