@@ -20,15 +20,22 @@ header {
     font-size: 4vh;
 }
 
+#navOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100vw;
+    z-index: 5;
+}
+#navOverlay.open {
+    left: 0;
+    right: 0;
+}
+
 nav {
     background-color: var(--main-green);
     color: #fff;
     font-size: large;
-    position: fixed;
-    right: 100vw;
-    top: 0;
-    bottom: 0;
-    z-index: 5;
     width: 20ch;
     max-width: 100%;
     padding: max(40px, 5vw);
@@ -36,9 +43,7 @@ nav {
     flex-direction: column;
     gap: 10px;
 }
-nav.open {
-    left: 0;
-}
+
 nav a {
     color: #fff;
     text-decoration: none;

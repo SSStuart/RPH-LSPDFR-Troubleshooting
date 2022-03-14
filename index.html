@@ -17,16 +17,19 @@
         <i class="fa-solid fa-wrench"></i> Résolution des problèmes pour <span style="color: #fcaf17;">Rage Plugin Hook</span> & <span style="color: #226df5;">LSPDFR</span>
     </header>
     <button id="navBtn" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
-    <nav>
-        <div style="height: 5px;"></div>
-        <span class="navCat">Rage Plugin Hook</span>
-        <a href="#unsupportedVersion">Version du jeu incompatible</a>
-        <a href="#insufficientPerm">Permissions insuffisantes ou mauvais antivirus</a>
-        <a href="#pluginBlocked">Plugin arrêté car il <i>freeze</i> le jeu</a>
-        <a href="#consoleKeySaving">Changer le raccourci clavier de la console RPH</a>
-        <span class="navCat">LSPDFR</span>
-        <a href="#crashed">LSPDFR a crashé</a>
-    </nav>
+    <div id="navOverlay">
+        <nav>
+            <div style="height: 5px;"></div>
+            <span class="navCat">Rage Plugin Hook</span>
+            <a href="#unsupportedVersion">Version du jeu incompatible</a>
+            <a href="#insufficientPerm">Permissions insuffisantes ou mauvais antivirus</a>
+            <a href="#pluginBlocked">Plugin arrêté car il <i>freeze</i> le jeu</a>
+            <a href="#consoleKeySaving">Changer le raccourci clavier de la console RPH</a>
+            <span class="navCat">LSPDFR</span>
+            <a href="#crashed">LSPDFR a crashé</a>
+        </nav>
+    </div>
+    
 
     <div id="notesContainer">
         <div class="note info">
@@ -228,8 +231,9 @@
             
         }
 
-        var menu = document.querySelector('nav');
+        var menu = document.getElementById('navOverlay');
         var btnMenu = document.querySelector('#navBtn');
+
         function toggleNav() {
             if (menu.classList.contains("open")) {
                 menu.classList.remove("open");
