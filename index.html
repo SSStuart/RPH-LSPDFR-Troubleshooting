@@ -219,6 +219,7 @@
             for (let pair of queryString.entries()) {
                 if (pair[0]=="fullscreen") {
                     document.getElementById(ErrorString).parentElement.classList.add("fullscreen");
+                    document.body.style.overflow = "hidden";
                     document.getElementById(ErrorString).parentElement.open = true;
                 }
             }
