@@ -188,7 +188,7 @@ section div details {
 img {
     max-width: 100%;
     max-height: 200px;
-    border: 2px solid gray;
+    border: 2px solid #fff;
     cursor: zoom-in;
     transition: max-height 0.5s ;
 }
