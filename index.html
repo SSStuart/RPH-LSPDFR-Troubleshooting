@@ -55,12 +55,12 @@
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#unsupportedVersionResolution">[Voir la résolution]</a>
                     <p><abbr title="Rage Plugin Hook">RPH</abbr> n'est pas compatible avec la version de GTA 5 installé.</p>
                     <div class="imgWithCredit">
-                        <img src="pictures/RPH_GameVersionMSG.png" alt="Grand Theft Auto V vX.X.XXX.X Retail NOT SUPPORTED" tabindex="0">
+                        <img class="imgError" src="pictures/RPH_GameVersionMSG.png" alt="Grand Theft Auto V vX.X.XXX.X Retail NOT SUPPORTED" tabindex="0">
                         <span>(Image de <i>yysox#3126</i>)</span>
                     </div>
                     <br>
                     <div class="imgWithCredit">
-                        <img src="pictures/RPH_GameVersionERROR.png" alt="The current game version is not supported" tabindex="0">
+                        <img class="imgError" src="pictures/RPH_GameVersionERROR.png" alt="The current game version is not supported" tabindex="0">
                         <span>(Image de <i>P7E_Shadow3254#1363</i>)</span>
                 </div>
                 </div>
@@ -102,7 +102,7 @@
                         </li>
                     </ul>
                     <div class="imgWithCredit">
-                        <img src="pictures/RPH_insufficientPerm.png" alt="Could not hook game process. Insufficient permissions or bad anti-virus" tabindex="0">
+                        <img class="imgError" src="pictures/RPH_insufficientPerm.png" alt="Could not hook game process. Insufficient permissions or bad anti-virus" tabindex="0">
                         <span>(Image de <i>kiwiw#7986</i>)</span>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                             <p>
                                 Faites un clique-droit sur le dossier du jeu > "Propriétés" > onglet "Sécurité" > "Modifier..." > pour chaque utilisateurs cocher la case "Contrôle total" sous "Autoriser", puis "Appliquer".
                             </p>
-                            <img src="pictures/RPH_insufficientPermResol.png" alt="" tabindex="0">
+                            <img class="imgError" src="pictures/RPH_insufficientPermResol.png" alt="" tabindex="0">
                         </li>
                     </ul>
                 </div>
@@ -143,9 +143,10 @@
                     <p>Lancez GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrez la console (<kbd>F4</kbd> par défaut) et écrivez <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).</p>
                 </div>
             </details>
-
         </div>
+    </section>
 
+    <section>
         <h1>LSPDFR</h1>
         <div>
             <details>
@@ -153,7 +154,7 @@
                 <div class="contDefErreur"  id="pluginBlocked">
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#pluginBlockedResolution">[Voir la résolution]</a>
                     <p><abbr title="Rage Plugin Hook">RPH</abbr> arrête un plugin au chargement du jeu parce qu'il bloque ce dernier.</p>
-                    <img src="pictures/RPH_blockedPlugin.png" alt="WARNING! Plugin '...' was terminated because it caused the game to freeze." tabindex="0">
+                    <img class="imgError" src="pictures/RPH_blockedPlugin.png" alt="WARNING! Plugin '...' was terminated because it caused the game to freeze." tabindex="0">
                 </div>
                 <div class="contResolution" id="pluginBlockedResolution">
                     <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
@@ -183,7 +184,7 @@
                 <div class="contDefErreur"  id="crashed">
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#crashedResolution">[Voir la résolution]</a>
                     <p>LSPDFR crash (mais pas le jeu).</p>
-                    <img src="pictures/LSPDFR_crashed.png" alt="LSPD First Response has crashed!" tabindex="0">
+                    <img class="imgError" src="pictures/LSPDFR_crashed.png" alt="LSPD First Response has crashed!" tabindex="0">
                 </div>
                 <div class="contResolution" id="crashedResolution">
                     <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
@@ -196,10 +197,6 @@
             </details>
         </div>
     </section>
-    
-    <section hidden>
-        <h1>LSPDFR</h1>
-    </section>
 
     <template>
         <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><i class="fa-solid fa-expand"></i></button>
@@ -207,7 +204,7 @@
     
 
     <footer>
-        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 13 mars 2022
+        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 13 mars 2022 <img id="certified" src="pictures/NHCCertified.png" alt="NHC Certified">
     </footer>
     <script>
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
