@@ -181,11 +181,12 @@ section div details {
     position: relative;
     display: inline-block;
 }
-.imgWithCredit span {
+.credit {
     position: absolute;
     right: 0;
     top: 0;
     backdrop-filter: blur(2px);
+    font-size: small;
 }
 
 .imgError {
