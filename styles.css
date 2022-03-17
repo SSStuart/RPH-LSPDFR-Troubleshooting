@@ -1,5 +1,6 @@
 :root {
     --main-green: #4aaf60;
+    --dark-green: #285f34;
 }
 
 html {
@@ -93,7 +94,7 @@ a {
     color: var(--main-green);
 }
 a:hover {
-    transform: scale(1.1);
+    color: var(--dark-green);
 }
 
 #notesContainer {
