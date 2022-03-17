@@ -39,6 +39,7 @@ nav {
     background-color: var(--main-green);
     color: #fff;
     font-size: large;
+    box-shadow: 0 0 100px #000;
     position: fixed;
     top: 0;
     bottom: 0;
