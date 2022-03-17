@@ -90,10 +90,10 @@ section {
 }
 
 a {
-    text-decoration-color: #0000ee3d;
+    color: var(--main-green);
 }
 a:hover {
-    text-decoration-color: #0000ee;
+    transform: scale(1.1);
 }
 
 #notesContainer {
