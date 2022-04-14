@@ -222,6 +222,10 @@ summary {
     overflow: auto;
 }
 
+.fullscreen .fullscreenBtn {
+    position: fixed;
+}
+
 code {
     padding: 2px;
 }
