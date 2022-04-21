@@ -115,10 +115,10 @@ a:hover {
     align-items: center;
 }
 .note.important {
-    background-color: lightgoldenrodyellow;
+    background-color: #fbfb3140;
 }
 .note.info {
-    background-color: lightcyan;
+    background-color: #41ffff40;
 }
 
 h3 {
