@@ -5,13 +5,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
     a:hover {
         color: var(--light-green) !important;
     }
     details {
         background-color: #fff1 !important;
     }
-    .fullscreen {
+    details.fullscreen {
         background-color: #222 !important;
     }
 }
@@ -88,8 +91,8 @@ nav a:hover {
     border-radius: 100%;
     border: 0px solid #0005;
     position: fixed;
-    top: max(1vw, 5px);
-    left: max(1vw, 5px);
+    top: 5px;
+    left: 5px;
     z-index: 6;
     display: flex;
     justify-content: center;
