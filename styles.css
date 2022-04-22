@@ -1,6 +1,19 @@
 :root {
     --main-green: #4aaf60;
     --dark-green: #285f34;
+    --light-green: #96caa1;
+}
+
+@media (prefers-color-scheme: dark) {
+    a:hover {
+        color: var(--light-green);
+    }
+    details {
+        background-color: #fff1;
+    }
+    details.fullscreen {
+        background-color: #222;
+    }
 }
 
 html {
@@ -75,8 +88,8 @@ nav a:hover {
     border-radius: 100%;
     border: 0px solid #0005;
     position: fixed;
-    top: 5px;
-    left: 5px;
+    top: max(1vw, 5px);
+    left: max(1vw, 5px);
     z-index: 6;
     display: flex;
     justify-content: center;
@@ -139,8 +152,8 @@ section div details {
     border: 0px solid #0005;
     border-radius: 100%;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: max(1vw, 5px);
+    right: max(1vw, 5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,4 +263,5 @@ footer {
     margin: 5px;
     padding: 5px;
     border: 1px solid var(--main-green);
+    background: #fffB;
 }
