@@ -130,6 +130,7 @@ a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 .note.important {
     background-color: #fbfb3140;
