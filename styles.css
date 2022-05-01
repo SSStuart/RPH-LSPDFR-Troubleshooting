@@ -17,6 +17,9 @@
     details.fullscreen {
         background-color: #222 !important;
     }
+    a.etiquette {
+        color: #222;
+    }
 }
 
 html {
