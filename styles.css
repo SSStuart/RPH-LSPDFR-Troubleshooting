@@ -22,6 +22,7 @@
     }
     a.etiquette:hover {
         background-color: var(--light-green);
+        columns: var(--dark-green);
     }
 }
 
