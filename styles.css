@@ -255,6 +255,13 @@ kbd {
     border: 1px solid #CCC;
 }
 
+a.etiquette {
+    background-color: var(--main-green);
+    color: #fff;
+    padding-inline: 4px;
+    text-decoration: none;
+}
+
 footer {
     display: flex;
     justify-content: center;
