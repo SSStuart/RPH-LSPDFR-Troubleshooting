@@ -20,6 +20,9 @@
     a.etiquette {
         color: #222;
     }
+    a.etiquette:hover {
+        background-color: var(--light-green);
+    }
 }
 
 html {
@@ -263,6 +266,9 @@ a.etiquette {
     color: #fff;
     padding-inline: 4px;
     text-decoration: none;
+}
+a.etiquette:hover {
+    background-color: var(--dark-green);
 }
 
 footer {
