@@ -144,6 +144,9 @@ a:hover {
 .note.info {
     background-color: #41ffff40;
 }
+.note p {
+    margin-block: 0.5rem;
+}
 
 h3 {
     display: inline-block;
