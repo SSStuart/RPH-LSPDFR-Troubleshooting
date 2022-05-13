@@ -10,7 +10,7 @@
         color-scheme: dark;
     }
     a:hover {
-        color: var(--light-green) !important;
+        color: var(--PRIMARY-light) !important;
     }
     details {
         background-color: #fff1 !important;
@@ -22,8 +22,8 @@
         color: #222;
     }
     a.etiquette:hover {
-        background-color: var(--light-green);
-        color: var(--dark-green);
+        background-color: var(--PRIMARY-light);
+        color: var(--PRIMARY-dark);
     }
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 header {
-    background-color: var(--main-green);
+    background-color: var(--PRIMARY-green);
     color: #fff;
     padding: 10px;
     padding-left: calc(4vh + 20px);
@@ -116,10 +116,10 @@ section {
 }
 
 a {
-    color: var(--main-green);
+    color: var(--PRIMARY-green);
 }
 a:hover {
-    color: var(--dark-green);
+    color: var(--PRIMARY-dark);
 }
 
 #notesContainer {
@@ -266,13 +266,13 @@ kbd {
 }
 
 a.etiquette {
-    background-color: var(--main-green);
+    background-color: var(--PRIMARY-green);
     color: #fff;
     padding-inline: 4px;
     text-decoration: none;
 }
 a.etiquette:hover {
-    background-color: var(--dark-green);
+    background-color: var(--PRIMARY-dark);
 }
 
 footer {
@@ -287,6 +287,6 @@ footer {
     height: 2rem;
     margin: 5px;
     padding: 5px;
-    border: 1px solid var(--main-green);
+    border: 1px solid var(--PRIMARY-green);
     background: #fffB;
 }
