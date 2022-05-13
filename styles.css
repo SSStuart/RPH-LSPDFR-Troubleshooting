@@ -1,7 +1,8 @@
 :root {
-    --main-green: #4aaf60;
-    --dark-green: #285f34;
-    --light-green: #96caa1;
+    --PRIMARY-green: #4aaf60;
+    --PRIMARY-dark: #285f34;
+    --PRIMARY-light: #96caa1;
+    --SECONDARY-green: #67af4a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +60,7 @@ header {
 }
 
 nav {
-    background-color: var(--main-green);
+    background-color: var(--SECONDARY-green);
     color: #fff;
     font-size: large;
     box-shadow: 0 0 100px #000;
@@ -91,7 +92,7 @@ nav a:hover {
 }
 
 #navBtn {
-    background-color: var(--main-green);
+    background-color: var(--SECONDARY-green);
     color: #fff;
     height: calc(4vh + 10px);
     width: calc(4vh + 10px);
