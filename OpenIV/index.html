@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=4">
+    <meta property="og:description" content="Résolution de problèmes communs pour RPH/LSPDFR">
+    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
+    <meta name="theme-color" content="#4aaf60">
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.png">
+    <script src="https://kit.fontawesome.com/eaaa5bf7be.js" crossorigin="anonymous"></script>
+    <title>RPH/LSPDFR Troubleshooting - OpenIV</title>
+</head>
+<body>
+    <header>
+        <div><i class="fa-solid fa-wrench"></i> Utilisation OpenIV</div>
+        <!--<div><a href="https://www.microsoft.com/store/apps/9P6HG46C4DDP" target="_blank" style="background: linear-gradient(45deg, #0aacff, #0874b6);color: #fff;text-decoration: none;font-size: 1.5ch;padding: 5px;border-radius: 5px;">LSPDFR Pre-requisites Checker</a></div>-->
+    </header>
+    <button id="navBtn" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+    <div id="navOverlay" onclick="toggleNav()">
+        <nav>
+            <div style="height: 5px;"></div>
+            <a href="../index.html">RPH/LSPDFR</a>
+        </nav>
+    </div>
+    
+
+    <div id="notesContainer">
+        <div class="note info">
+            <p>
+                <i class="fa-solid fa-circle-info"></i> Avant de modder le jeu ou d'ajouter des plugins, il est recommandé de faire une sauvegarde (copie) de la racine.
+            </p>
+        </div>
+    </div>
+
+    <section>
+        <div>
+            <details>
+                <summary><h2 class="typeErreur">OpenIV n'as pas les permissions nécessaires</h2></summary>
+                <div class="contDefErreur"  id="permissions">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#permissionResolution">[Voir la résolution]</a>
+                    <p>
+                        OpenIV n'as pas les permissions nécessaires pour acceder au dossier du jeu.
+                    </p>
+                    <img class="imgError" src="../pictures/OpIV_PermissionError.png" alt="Erreur: OpenIV n'a pas les permissions nécessaires pour modifier ce répertoir. Lancez OpenIV en tant qu'administrateur." tabindex="0">
+                </div>
+                <div class="contResolution" id="permissionResolution">
+                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                Relancez OpenIV en tant qu'administrateur. Une fois OpenIV lancé, cliquez sur "What can I do?" dans la bannière orange, puis cliquez sur "Set permissions", cliquez sur "OK" pour le message de confirmation, puis sur "Close" et relancer OpenIV <strong>(pas en tant qu'administrateur)</strong>.
+                            </p>
+                            <img class="imgError" src="../pictures/OpIV_SetPermissions1.png" alt="" tabindex="0">
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <template>
+        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><i class="fa-solid fa-expand"></i></button>
+    </template>
+    
+
+    <footer>
+        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 04 décembre 2022 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="pictures/NHCCertified.png" alt="NHC Certified"></a>
+    </footer>
+    <script>
+        if (document.location.href.includes('#') && document.location.href.includes('?')) {
+            var fullscreen = true
+            let ErrorString = document.location.href.split('#')[1].split('?')[0];
+            let paramString = document.location.href.split('?')[1];
+            let queryString = new URLSearchParams(paramString);
+            
+            for (let pair of queryString.entries()) {
+                if (pair[0]=="fullscreen") {
+                    document.getElementById(ErrorString).parentElement.classList.add("fullscreen");
+                    document.body.style.overflow = "hidden";
+                    document.getElementById(ErrorString).parentElement.open = true;
+                }
+            }
+        }
+
+        var btnFSTemp = document.querySelector('template');
+        var erreurs = document.getElementsByClassName('contDefErreur');
+        for (erreur=0; erreur<erreurs.length; erreur++) {
+            erreurs[erreur].appendChild(btnFSTemp.content.cloneNode(true));
+            
+        }
+
+        var menu = document.getElementById('navOverlay');
+        var btnMenu = document.querySelector('#navBtn');
+
+        function toggleNav() {
+            if (menu.classList.contains("open")) {
+                menu.classList.remove("open");
+            } else {
+                menu.classList.add("open");
+            }
+        }
+
+        function toggleFullscreen(element) {
+            idErreur = element.parentElement.id;
+            if (!fullscreen){
+                location.href += "#"+idErreur+"?fullscreen";
+                location.reload();
+            } else {
+                location.href = location.href.split("#")[0];
+                document.getElementById(idErreur).parentElement.classList.remove("fullscreen");
+            }
+        }
+    </script>
+</body>
+</html>
