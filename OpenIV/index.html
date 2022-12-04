@@ -44,7 +44,7 @@
                 <div class="contDefErreur"  id="permissions">
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#permissionResolution">[Voir la résolution]</a>
                     <p>
-                        OpenIV n'as pas les permissions nécessaires pour acceder au dossier du jeu.
+                        OpenIV n'a pas les permissions nécessaires pour accéder au dossier du jeu.
                     </p>
                     <img class="imgError" src="../pictures/OpIV_PermissionError.png" alt="Erreur: OpenIV n'a pas les permissions nécessaires pour modifier ce répertoir. Lancez OpenIV en tant qu'administrateur." tabindex="0">
                 </div>
@@ -60,6 +60,40 @@
                                 puis sur "Close" et relancer OpenIV <strong>(pas en tant qu'administrateur)</strong>.
                             </p>
                             <img class="imgError" src="../pictures/OpIV_SetPermissions1.png" alt="" tabindex="0">
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div>
+            <details>
+                <summary><h2 class="typeErreur">Impossible d'ajouter des fichiers</h2></summary>
+                <div class="contDefErreur"  id="permissions">
+                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#addFilesResolution">[Voir la résolution]</a>
+                    <p>
+                        Impossible d'ajouter/remplacer des fichiers dans OpenIV.
+                    </p>
+                </div>
+                <div class="contResolution" id="addFilesResolution">
+                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                Vérifiez que vous avez installé <em>ASI Manager</em> et <em>OpenIV.asi</em>.<br>
+                                Allez dans "Tools" > "ASI Manager" et vérifiez qu'ils sont installé.
+                            </p>
+                            <img class="imgError" src="../pictures/OpIV_ASIManager.png" alt="" tabindex="0">
+                        </li>
+                        <li>
+                            <p>Vérifiez que vous avez activé l' "Edit mode".</p>
+                            <img class="imgError" src="../pictures/OpIV_EditMode.png" alt="" tabindex="0">
+                        </li>
+                        <li>
+                            <p>
+                                Si vous glissez des fichiers directement d'une archive (.zip, .rar ...), essayez d'extraire les fichiers (sur votre Bureau par exepmle) dans un premier temps, puis de glisser les fichiers extrait sur OpenIV ensuite.
+                            </p>
+                            <img class="imgError" src="../pictures/OpIV_Extract.png" alt="" tabindex="0">
                         </li>
                     </ul>
                 </div>
