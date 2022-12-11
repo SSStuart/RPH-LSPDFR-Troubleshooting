@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles.css?v=4">
-    <meta property="og:description" content="Résolution de problèmes communs pour RPH/LSPDFR">
-    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
-    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
+    <meta property="og:description" content="Résolution de problèmes communs pour OpenIV">
+    <meta property="og:title" content="(RPH/LSPDFR) OpenIV Troubleshooting">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/OpenIV" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
     <meta name="theme-color" content="#4aaf60">
     <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
     <script src="https://kit.fontawesome.com/eaaa5bf7be.js" crossorigin="anonymous"></script>
-    <title>RPH/LSPDFR Troubleshooting - OpenIV</title>
+    <title>(RPH/LSPDFR) OpenIV Troubleshooting</title>
 </head>
 <body>
     <header>
-        <div><i class="fa-solid fa-wrench"></i> Utilisation OpenIV</div>
-        <!--<div><a href="https://www.microsoft.com/store/apps/9P6HG46C4DDP" target="_blank" style="background: linear-gradient(45deg, #0aacff, #0874b6);color: #fff;text-decoration: none;font-size: 1.5ch;padding: 5px;border-radius: 5px;">LSPDFR Pre-requisites Checker</a></div>-->
+        <div><i class="fa-solid fa-wrench"></i> Résolution de problèmes communs pour</div>
     </header>
     <button id="navBtn" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
     <div id="navOverlay" onclick="toggleNav()">
         <nav>
             <div style="height: 5px;"></div>
+            <a href="#permissions">OpenIV n'as pas les permissions nécessaires</a>
+            <a href="#addFiles">Impossible d'ajouter des fichiers</a>
+            <br>
             <a href="../index.html">RPH/LSPDFR</a>
         </nav>
     </div>
@@ -69,7 +71,7 @@
         <div>
             <details>
                 <summary><h2 class="typeErreur">Impossible d'ajouter des fichiers</h2></summary>
-                <div class="contDefErreur"  id="permissions">
+                <div class="contDefErreur"  id="addFiles">
                     <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#addFilesResolution">[Voir la résolution]</a>
                     <p>
                         Impossible d'ajouter/remplacer des fichiers dans OpenIV.
@@ -107,7 +109,7 @@
     
 
     <footer>
-        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 04 décembre 2022 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="../pictures/NHCCertified.png" alt="NHC Certified"></a>
+        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 11 décembre 2022 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="../pictures/NHCCertified.png" alt="NHC Certified"></a>
     </footer>
     <script>
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
