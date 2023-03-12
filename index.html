@@ -291,9 +291,12 @@
     
 
     <footer>
-        Créer par SSStuart#0046 pour le #need-help. Mis à jour le 13 novembre 2022 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="pictures/NHCCertified.png" alt="NHC Certified"></a>
+        Créer par SSStuart#0046 pour le #need-help. Mis à jour le <span id="dateAuto">01 janvier 2023</span> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="pictures/NHCCertified.png" alt="NHC Certified"></a>
     </footer>
     <script>
+        var lastEditDate = document.lastModified;
+        document.getElementById('dateAuto').innerText = lastEditDate;
+
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
             var fullscreen = true
             let ErrorString = document.location.href.split('#')[1].split('?')[0];
