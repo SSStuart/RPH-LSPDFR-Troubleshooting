@@ -45,6 +45,11 @@ header {
     font-size: 4vh;
 }
 
+.icon {
+    height: 1rem;
+    width: 1rem;
+}
+
 #navOverlay {
     position: fixed;
     top: 0;

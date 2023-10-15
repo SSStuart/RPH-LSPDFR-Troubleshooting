@@ -12,15 +12,13 @@
     <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
     <meta name="theme-color" content="#4aaf60">
     <link rel="icon" type="image/x-icon" href="pictures/favicon.png">
-    <script src="https://kit.fontawesome.com/eaaa5bf7be.js" crossorigin="anonymous"></script>
     <title>RPH/LSPDFR Troubleshooting</title>
 </head>
 <body>
     <header>
-        <div><i class="fa-solid fa-wrench"></i> Résolution de problèmes communs pour <span style="color: #fcaf17;">Rage Plugin Hook</span> & <span style="color: #226df5;">LSPDFR</span></div>
-        <!--<div><a href="https://www.microsoft.com/store/apps/9P6HG46C4DDP" target="_blank" style="background: linear-gradient(45deg, #0aacff, #0874b6);color: #fff;text-decoration: none;font-size: 1.5ch;padding: 5px;border-radius: 5px;">LSPDFR Pre-requisites Checker</a></div>-->
+        <div><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution de problèmes communs pour <span style="color: #fcaf17;">Rage Plugin Hook</span> & <span style="color: #226df5;">LSPDFR</span></div>
     </header>
-    <button id="navBtn" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+    <button id="navBtn" onclick="toggleNav()"><img class="icon" href="pictures/icons/menu.svg" alt="MENU"></button>
     <div id="navOverlay" onclick="toggleNav()">
         <nav>
             <div style="height: 5px;"></div>
@@ -39,33 +37,24 @@
     
 
     <div id="notesContainer">
-        <!--<div class="note important">
-            <p>
-                <i class="fa-solid fa-triangle-exclamation"></i> Une nouvelle mise à jour de GTA 5 est disponible depuis le 25 octobre.
-            </p>
-            <p><a href="https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response/" target="_blank">LSPDFR</a> (qui contient la dernière version de <abbr title="Rage Plugin Hook">RPH</abbr>) a été mise à jour.<br>
-            <a href="https://www.dev-c.com/gtav/scripthookv/" target="_blank">Script Hook V</a> a été mise à jour.</p>
-            <p>Le gameconfig n'a pas été mis à jour, mais semble fonctionner.</p>
-        </div>-->
-
-        <!-- <div class="note important">
-            <p>
-                <i class="fa-solid fa-triangle-exclamation"></i> Le tutoriel de BUG-MAN-FR "<a href="https://youtu.be/V9IkLXpS9qA" target="_blank">Comment installer LSPDFR 0.4.9 avec des Plugins</a>" n'est plus entièrement à jour.<br>
-                Il faut ignorer la partie "Mettre à jour <abbr title="Rage Plugin Hook">RPH</abbr>".
-            </p>
-        </div> -->
-
         <div class="note info">
             <p>
-                <i class="fa-solid fa-circle-info"></i> Avant de modder le jeu ou d'ajouter des plugins, il est recommandé de faire une sauvegarde (copie) de la racine.
+                <img class="icon" href="pictures/icons/infos.svg" alt=""> Avant de modder le jeu ou d'ajouter des plugins, il est recommandé de faire une sauvegarde (copie) de la racine.
             </p>
         </div>
-
-        <!-- <div class="note info">
+        <div class="note info">
             <p>
-                <i class="fa-solid fa-circle-info"></i> Le site de Rage Plugin Hook n'est plus maintenu à jour, ne téléchargez donc pas <abbr title="Rage Plugin Hook">RPH</abbr> en passant par là. (Pensez cependant à installer les <!--<a href="https://ragepluginhook.net/Requirements.aspx" target="_blank">prérequis</a>--><!-- prérequis : ① <a href="https://dotnet.microsoft.com/download/dotnet-framework/net462" target="_blank">Microsoft .NET Framework 4.6.2 Runtime</a>; ② <a href="https://www.microsoft.com/fr-FR/download/details.aspx?id=26999" target="_blank">Microsoft Visual C++ 2010 SP1 Redistributable Package (x64)</a>; ③ <a href="https://www.microsoft.com/fr-FR/download/details.aspx?id=48145" target="_blank">Visual C++ Redistributable for Visual Studio 2015 (x64)</a>)
+                <img class="icon" href="pictures/icons/infos.svg" alt=""> Vérifier la compatiblité et la mise à jour des différents prérequis avec LSPDFR Prerequisites Checker.
+                <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+                <ms-store-badge
+                    productid="9P6HG46C4DDP"
+                    window-mode="pop up"
+                    theme="auto"
+                    language="fr"
+                    animation="on">
+                </ms-store-badge>
             </p>
-        </div> -->
+        </div>
     </div>
 
     <section>
@@ -74,7 +63,7 @@
             <details>
                 <summary><h2 class="typeErreur">Version du jeu incompatible</h2></summary>
                 <div class="contDefErreur"  id="unsupportedVersion">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#unsupportedVersionResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#unsupportedVersionResolution">[Voir la résolution]</a>
                     <p>
                         <abbr title="Rage Plugin Hook">RPH</abbr> n'est pas compatible avec la version de GTA 5 installé.
                     </p>
@@ -87,7 +76,7 @@
                 </div>
                 </div>
                 <div class="contResolution" id="unsupportedVersionResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                     <ul>
                         <!-- <li>
                             <details style="box-shadow: 0 0 5px 0px var(--main-green);">
@@ -108,7 +97,7 @@
                         </li> -->
                         <li>
                             <p>
-                                Attendre une mise à jour de <abbr title="Rage Plugin Hook">RPH</abbr> sur le <a href="https://ragepluginhook.net/Downloads.aspx?Category=1" target="_blank">site</a><!-- (<i class="fa-solid fa-triangle-exclamation"></i> à priori plus maintenu).--><br>
+                                Attendre une mise à jour de <abbr title="Rage Plugin Hook">RPH</abbr> sur le <a href="https://ragepluginhook.net/Downloads.aspx?Category=1" target="_blank">site</a><br>
                                 (Ou éventuellement récupérer le <code>RAGEPluginHook.exe</code> de LSPDFR)
                             </p>
                         </li>
@@ -119,7 +108,7 @@
             <details>
                 <summary><h2 class="typeErreur">Permissions insuffisantes ou mauvais antivirus</h2></summary>
                 <div class="contDefErreur"  id="insufficientPerm">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#insufficientPermResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#insufficientPermResolution">[Voir la résolution]</a>
                     <ul>
                         <li>
                             <p>
@@ -143,7 +132,7 @@
                     </div>
                 </div>
                 <div class="contResolution" id="insufficientPermResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                     <ul>
                         <li>
                             Option 1
@@ -194,7 +183,7 @@
             <details>
                 <summary><h2 class="typeErreur"><abbr title="Rage Plugin Hook">RPH</abbr>/GTA 5 a crashé</h2></summary>
                 <div class="contDefErreur"  id="gameCrashed">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#gameCrashedResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#gameCrashedResolution">[Voir la résolution]</a>
                     <p>
                         <abbr title="Rage Plugin Hook">RPH</abbr> a fait crasher le jeu.
                     </p>
@@ -205,7 +194,7 @@
                     <img class="imgError" src="pictures/RPH_crash3.png" alt="(Crash report)" tabindex="0">
                 </div>
                 <div class="contResolution" id="gameCrashedResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                         <p>
                             Lorsque le message d'erreur de <abbr title="Rage Plugin Hook">RPH</abbr> "The game has crashed!" apparaît, cliquez sur "Generate crash report" (voir 2<sup>ème</sup> image).<br>
                             Une fois le rapport généré, copiez-le et envoyez-le dans le #need-help.
@@ -219,13 +208,13 @@
             <details>
                 <summary><h2 class="typeErreur">Changer le raccourci clavier de la console <abbr title="Rage Plugin Hook">RPH</abbr></h2></summary>
                 <div class="contDefErreur"  id="consoleKeySaving">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#consoleKeySavingResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#consoleKeySavingResolution">[Voir la résolution]</a>
                     <p>
                         Le changement du raccourci clavier de la console n'est pas enregistré/appliqué.
                     </p>
                 </div>
                 <div class="contResolution" id="consoleKeySavingResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                     <p>
                         Lancez GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrez la console (<kbd>F4</kbd> par défaut) et écrivez <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).
                     </p>
@@ -240,14 +229,14 @@
             <details>
                 <summary><h2 class="typeErreur">Plugin arrêté car il <i>freeze</i> le jeu</h2></summary>
                 <div class="contDefErreur"  id="pluginBlocked">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#pluginBlockedResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#pluginBlockedResolution">[Voir la résolution]</a>
                     <p>
                         <abbr title="Rage Plugin Hook">RPH</abbr> arrête un plugin au chargement du jeu parce qu'il bloque ce dernier.
                     </p>
                     <img class="imgError" src="pictures/RPH_blockedPlugin.png" alt="WARNING! Plugin '...' was terminated because it caused the game to freeze." tabindex="0">
                 </div>
                 <div class="contResolution" id="pluginBlockedResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                     <ul>
                         <li>
                             Option 1
@@ -272,14 +261,14 @@
             <details>
                 <summary><h2 class="typeErreur">LSPDFR a crashé</h2></summary>
                 <div class="contDefErreur"  id="crashed">
-                    <h3 class="hErreur"><i class="fa-solid fa-triangle-exclamation"></i> Erreur</h3> <a class="gotoResol" href="#crashedResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><img class="icon" href="pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#crashedResolution">[Voir la résolution]</a>
                     <p>
                         LSPDFR crash (mais pas le jeu).
                     </p>
                     <img class="imgError" src="pictures/LSPDFR_crashed.png" alt="LSPD First Response has crashed!" tabindex="0">
                 </div>
                 <div class="contResolution" id="crashedResolution">
-                    <h3 class="hResolu"><i class="fa-solid fa-wrench"></i> Résolution</h3>
+                    <h3 class="hResolu"><img class="icon" href="pictures/icons/wrench.svg" alt=""> Résolution</h3>
                     <p>
                         Ce type d'erreur peut avoir plusieurs causes (en général lié à un plugin qui ne fonctionne pas).
                     </p>
@@ -293,7 +282,7 @@
     </section>
 
     <template>
-        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><i class="fa-solid fa-expand"></i></button>
+        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><img class="icon" href="pictures/icons/fullScreen.svg" alt="Agrandir"></button>
     </template>
     
 
