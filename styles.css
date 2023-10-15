@@ -50,6 +50,9 @@ header {
 }
 
 .icon {
+}
+.icon[data-src="pictures/icons/wrench.svg"] {
+    content: attr(data-src);
     height: 1em;
     width: 1em;
 }
