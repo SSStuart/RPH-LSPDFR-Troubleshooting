@@ -49,9 +49,7 @@ header {
     font-size: 4vh;
 }
 
-.icon {
-}
-.icon[data-src="pictures/icons/wrench.svg"] {
+.icon[data-src="pictures/icons/wrench.svg"]::after {
     content: attr(data-src);
     height: 1em;
     width: 1em;
