@@ -9,6 +9,10 @@
     :root {
         color-scheme: dark;
     }
+
+    .icon {
+        filter: invert(1);
+    }
     a:hover {
         color: var(--PRIMARY-light) !important;
     }
