@@ -16,9 +16,9 @@
 </head>
 <body>
     <header>
-        <div><img class="icon" src="../pictures/icons/wrench.svg" alt=""> Résolution de problèmes communs pour OpenIV</div>
+        <div><i class="iiicon" data-name="wrench"></i> Résolution de problèmes communs pour OpenIV</div>
     </header>
-    <button id="navBtn" onclick="toggleNav()"><img class="icon" src="../pictures/icons/menu.svg" alt="MENU"></button>
+    <button id="navBtn" onclick="toggleNav()"><i class="iiicon" data-name="menu"></i></button>
     <div id="navOverlay" onclick="toggleNav()">
         <nav>
             <div style="height: 5px;"></div>
@@ -33,7 +33,7 @@
     <div id="notesContainer">
         <div class="note info">
             <p>
-                <img class="icon" src="../pictures/icons/infos.svg" alt=""> Avant de modder le jeu ou d'ajouter des plugins, il est recommandé de faire une sauvegarde (copie) de la racine.
+                <i class="iiicon" data-name="info"></i> Avant de modder le jeu ou d'ajouter des plugins, il est recommandé de faire une sauvegarde (copie) de la racine.
             </p>
         </div>
     </div>
@@ -43,14 +43,14 @@
             <details>
                 <summary><h2 class="typeErreur">OpenIV n'as pas les permissions nécessaires</h2></summary>
                 <div class="contDefErreur"  id="permissions">
-                    <h3 class="hErreur"><img class="icon" src="../pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#permissionResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#permissionResolution">[Voir la résolution]</a>
                     <p>
                         OpenIV n'a pas les permissions nécessaires pour accéder au dossier du jeu.
                     </p>
                     <img class="imgError" src="../pictures/OpIV_PermissionError.png" alt="Erreur: OpenIV n'a pas les permissions nécessaires pour modifier ce répertoir. Lancez OpenIV en tant qu'administrateur." tabindex="0">
                 </div>
                 <div class="contResolution" id="permissionResolution">
-                    <h3 class="hResolu"><img class="icon" src="../pictures/icons/wrench.svg" alt=""> Résolution</h3>
+                    <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
                     <ul>
                         <li>
                             <p>
@@ -71,13 +71,13 @@
             <details>
                 <summary><h2 class="typeErreur">Impossible d'ajouter des fichiers</h2></summary>
                 <div class="contDefErreur"  id="addFiles">
-                    <h3 class="hErreur"><img class="icon" src="../pictures/icons/warning.svg" alt=""> Erreur</h3> <a class="gotoResol" href="#addFilesResolution">[Voir la résolution]</a>
+                    <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#addFilesResolution">[Voir la résolution]</a>
                     <p>
                         Impossible d'ajouter/remplacer des fichiers dans OpenIV.
                     </p>
                 </div>
                 <div class="contResolution" id="addFilesResolution">
-                    <h3 class="hResolu"><img class="icon" src="../pictures/icons/wrench.svg" alt=""> Résolution</h3>
+                    <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
                     <ul>
                         <li>
                             <p>N'exécutez pas OpenIV en tant qu'administrateur, cela bloque la fonction cliquer-glisser.</p>
@@ -111,7 +111,7 @@
     </section>
 
     <template>
-        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><img class="icon" src="../pictures/icons/fullScreen.svg" alt="Agrandir"></button>
+        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><i class="iiicon" data-name="fullscreen"></i></button>
     </template>
     
 
