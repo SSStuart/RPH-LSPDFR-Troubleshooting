@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
+    <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
+    <meta property="og:description" content="Résolution de problèmes communs pour RPH/LSPDFR">
+    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/indiv/autorisationsDossier.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
+    <meta name="theme-color" content="#4aaf60">
+    <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
+    <title>RPH/LSPDFR Troubleshooting - Autorisations</title>
+</head>
+<body>
+    <header>
+        <div><a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="arrowLeft"></i></a> <i class="iiicon" data-name="wrench"></i> Autorisations du dossier du jeu</div>
+    </header>
+    
+
+    <section>
+        
+        <p>Si les autorisations utilisateur du dossier du jeu ne sont pas suffisante certains fichiers peuvent être <em>bloquées</em> et ne seront pas utilisable par le jeu.</p>
+        <p>Lors de l'installation de certains mods et certains autres événements peuvent modifier ces autorisations, vérifier donc régulièrement que vous avez les autorisations nécessaires :</p>
+        <ol class="steps">
+            <li>Faites un clic-droit sur le dossier du jeu (<i class="iiicon" data-name="warning"></i> Cela ne fonctionnera pas sur un raccourci vers le dossier) puis cliquez sur "Propriétés"<br>
+                <img class="imgError" src="pictures/Autorisations1.png" alt="" tabindex="0">
+            </li>
+            <li>Allez sur l'onglet "Sécurité", puis cliquez sur "Modifier..."<br>
+                <img class="imgError" src="pictures/Autorisations2.png" alt="" tabindex="0">
+            </li>
+            <li>Sélectionnez "Utilisateurs (...)", puis cochez la case "Autoriser" pour le "Contrôle total" et cliquez sur "Appliquer" (si la case est déjà cochée, décochez puis recochez la case)<br>
+                <img class="imgError" src="pictures/Autorisations3.png" alt="" tabindex="0">
+            </li>
+        </ol>
+    </section>
+    
+
+    <footer>
+        <p>Créer par <a href="https://discord.com/users/238171985127931905" target="_blank">ssstuart</a> pour le #need-help. Mis à jour le <span id="dateAuto">01 janvier 2023</span></p> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="pictures/NHCCertified.png" alt="NHC Certified"></a>
+    </footer>
+    <script>
+        var lastEditDate = new Date(document.lastModified);
+        document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
+    </script>
+</body>
+</html>

@@ -116,7 +116,8 @@ nav a:hover {
 }
 
 section {
-    margin: 20px;
+    margin: auto;
+    width: min(95%, 65em);
 }
 
 a {
@@ -222,7 +223,7 @@ section div details {
 .imgError {
     max-width: 100%;
     max-height: 200px;
-    border: 2px solid #fff;
+    border: 2px solid var(--PRIMARY-green);
     cursor: zoom-in;
     transition: max-height 0.5s ;
 }
@@ -294,4 +295,24 @@ footer {
     padding: 5px;
     border: 1px solid var(--PRIMARY-green);
     background: #fffB;
+}
+
+
+#linkHome {
+    color: #fff;
+    background-color: var(--PRIMARY-dark);
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    text-align: center;
+    transition: 500ms;
+}
+#linkHome:hover,
+#linkHome:focus {
+    background-color: var(--PRIMARY-light);
+}
+
+.steps > li {
+    font-size: 1.3em;
+    margin-bottom: 1em;
 }
