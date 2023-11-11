@@ -18,16 +18,19 @@
 </head>
 <body>
     <header>
-        <div><a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="arrowLeft"></i></a> <i class="iiicon" data-name="wrench"></i> Autorisations du dossier du jeu</div>
+        <div><a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="home"></i></a> <i class="iiicon" data-name="wrench"></i> Autorisations du dossier du jeu</div>
     </header>
     
 
-    <section>
-        
+    <section style="padding-left: 2em;">
+        <div class="stepsNavCont">
+            <button id="btnPrevStep" onclick="gotoStep(-1)" disabled="disabled"><i class='iiicon' data-name='arrowUp'>/\</i><span class="btnStepName"> Précédent</span></button>
+            <button id="btnNextStep" onclick="gotoStep(1)"><i class='iiicon' data-name='arrowDown'>\/</i><span class="btnStepName"> Suivant</span></button>
+        </div>
         <p>Si les autorisations utilisateur du dossier du jeu ne sont pas suffisante certains fichiers peuvent être <em>bloquées</em> et ne seront pas utilisable par le jeu.</p>
         <p>L'installation de certains mods et certains autres événements peuvent modifier ces autorisations, vérifier donc régulièrement que vous avez les autorisations nécessaires :</p>
         <ol class="steps">
-            <li>Faites un clic-droit sur le dossier du jeu (<i class="iiicon" data-name="warning"></i> Cela ne fonctionnera pas sur un raccourci vers le dossier) puis cliquez sur "Propriétés"<br>
+            <li class="current">Faites un clic-droit sur le dossier du jeu (<i class="iiicon" data-name="warning"></i> Cela ne fonctionnera pas sur un raccourci vers le dossier) puis cliquez sur "Propriétés"<br>
                 <img class="imgError" src="pictures/Autorisations1.png" alt="" tabindex="0">
             </li>
             <li>Allez sur l'onglet "Sécurité", puis cliquez sur "Modifier..."<br>
@@ -46,6 +49,34 @@
     <script>
         var lastEditDate = new Date(document.lastModified);
         document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
+
+        var btnPrevious = document.querySelector('.stepsNavCont button:nth-child(1)');
+        btnPrevious.disabled = true;
+        document.querySelector('.steps li').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+        var btnNext = document.querySelector('.stepsNavCont button:nth-child(2)');
+        btnNext.disabled = false;
+        var currentStep = 0;
+        var maxStep = document.querySelectorAll('.steps li').length - 1;
+        function gotoStep(dir) {
+            currentStep += dir;
+            if (currentStep == 0)
+                btnPrevious.disabled = true;
+            else
+                btnPrevious.disabled = false;
+            if (currentStep == maxStep)
+                btnNext.disabled = true;
+            else
+                btnNext.disabled = false;
+
+            document.querySelectorAll('.steps li').forEach((el, i) => {
+                if (i == currentStep) {
+                    el.classList.add('current');
+                    el.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+                }
+                else
+                    el.classList.remove('current');
+            });
+        }
     </script>
 </body>
 </html>

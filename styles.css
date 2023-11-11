@@ -315,4 +315,54 @@ footer {
 .steps > li {
     font-size: 1.3em;
     margin-bottom: 1em;
+    transition: 500ms;
+    opacity: 0.3;
+    filter: grayscale(1);
+}
+.steps > li.current {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.stepsNavCont {
+    position: fixed;
+    top: 50%;
+    translate: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.stepsNavCont > button {
+    font-size: 2em;
+    background-color: var(--PRIMARY-green);
+    color: #fff;
+    border: solid #0003 3px;
+    cursor: pointer;
+    text-align: left;
+    transition: 250ms;
+}
+.stepsNavCont > button:hover {
+    background-color: var(--PRIMARY-dark);
+}
+.stepsNavCont > button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+#btnPrevStep {
+    border-top-right-radius: 0.5em;
+}
+#btnNextStep {
+    border-bottom-right-radius: 0.5em;
+}
+.btnStepName {
+    max-height: 1em;
+    display: inline-block;
+    overflow: hidden;
+    animation: disapear 1s ease-in-out 2s forwards;
+}
+@keyframes disapear {
+    0% {font-size: 1em;}
+    100% {font-size: 0;}
+    
 }
