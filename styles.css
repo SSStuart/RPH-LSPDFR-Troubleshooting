@@ -227,7 +227,8 @@ section div details {
     cursor: zoom-in;
     transition: max-height 0.5s ;
 }
-.imgError:focus {
+.imgError:focus,
+.current img {
     max-height: 100vh;
     cursor: default;
     transition: max-height 1s ;
