@@ -201,8 +201,9 @@ section div details {
 }
 
 .stepEmoji {
-    height: 1em;
-    width: 1em;
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
 }
 
 .gotoResol {
