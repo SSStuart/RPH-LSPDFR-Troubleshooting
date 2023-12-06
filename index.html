@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css?v=4">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=4.1">
     <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
     <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
     <meta property="og:description" content="Résolution de problèmes communs pour RPH/LSPDFR">
@@ -129,13 +129,13 @@
                     <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
                     <ul>
                         <li>
-                            Option 1
+                            Option <img class="stepEmoji" src="pictures/steps/one.png" alt="1">
                             <p>
                                 Vérifiez que <code>RAGEPluginHook.exe</code> est bien placé dans la racine d'origine de votre jeu (et non pas une copie).
                             </p>
                         </li>
                         <li>
-                            Option 2
+                            Option <img class="stepEmoji" src="pictures/steps/two.png" alt="2">
                             <p>
                                 Dans les paramètres de votre antivirus, ajouter une exception au dossier du jeu.<br>
                                 <a class="etiquette" href="https://support.avast.com/fr-fr/article/Antivirus-scan-exclusions/" target="_blank">Avast</a> 
@@ -145,26 +145,26 @@
                             </p>
                         </li>
                         <li>
-                            Option 3
+                            Option <img class="stepEmoji" src="pictures/steps/three.png" alt="3">
                             <p>
                                 Lancez GTA 5, puis une fois en jeu (mode histoire, prologue fini au minimum) lancez <abbr title="Rage Plugin Hook">RPH</abbr>.
                             </p>
                         </li>
                         <li>
-                            Option 4
+                            Option <img class="stepEmoji" src="pictures/steps/four.png" alt="4">
                             <p>
                                 Faites un clique-droit sur le dossier du jeu > "Propriétés" > onglet "Sécurité" > "Modifier..." > <strong>pour chaque groupe</strong> (partie haute) cocher la case "Contrôle total" sous "Autoriser", puis "Appliquer".
                             </p>
                             <img class="imgError" src="pictures/RPH_insufficientPermResol.png" alt="" tabindex="0">
                         </li>
                         <li>
-                            Option 5
+                            Option <img class="stepEmoji" src="pictures/steps/five.png" alt="5">
                             <p>
                                 Si vous avez (Nvidia) GeForce Experience : désactivez la "Superposition en jeu" dans les paramètres généraux de l'application GeForce Experience.
                             </p>
                         </li>
                         <li>
-                            Option 6
+                            Option <img class="stepEmoji" src="pictures/steps/six.png" alt="6">
                             <p>
                                 <abbr title="Rage Plugin Hook">RPH</abbr> <em>peut</em> créer un fichier caché dans la racine qui peut être à l'origine de l'erreur.<br>
                                 Pour le supprimer : lancez un cmd en tant qu'administrateur (<kbd>Windows</kbd> + <kbd>R</kbd>, entrez <code>cmd</code> puis appuyez sur <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>Entrée</kbd>) puis entrez la commande suivante : <code>del <span style="color: var(--PRIMARY-green);">[Chemin de la racine]</span>\rphhs</code>
@@ -233,7 +233,7 @@
                     <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
                     <ul>
                         <li>
-                            Option 1
+                            Option <img class="stepEmoji" src="pictures/steps/one.png" alt="1">
                             <p>
                                 Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "General".<br>
                                 Changez la valeur de "Plugin timeout threshold" à <code>15000</code> (15 secondes).<br>
@@ -241,7 +241,7 @@
                             </p>
                         </li>
                         <li>
-                            Option 2
+                            Option <img class="stepEmoji" src="pictures/steps/two.png" alt="2">
                             <p>
                                 Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "Plugins".<br>
                                 Sélectionnez "Don't load any plugins on startup".<br>
