@@ -288,6 +288,7 @@
         document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
 
         if (document.location.href.includes('#') && document.location.href.includes('?')) {
+            document.querySelector('meta[property="og:url"]').setAttribute("content", document.location.href);
             var fullscreen = true
             let ErrorString = document.location.href.split('#')[1].split('?')[0];
             let paramString = document.location.href.split('?')[1];
