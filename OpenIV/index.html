@@ -138,9 +138,9 @@
             
             for (let pair of queryString.entries()) {
                 if (pair[0]=="fullscreen") {
-                    document.getElementById(ErrorString).parentElement.classList.add("fullscreen");
+                    document.getElementById(ErrorString).parentElement.parentElement.classList.add("fullscreen");
                     document.body.style.overflow = "hidden";
-                    document.getElementById(ErrorString).parentElement.open = true;
+                    document.getElementById(ErrorString).parentElement.parentElement.open = true;
                 }
             }
         }
@@ -170,7 +170,7 @@
                 location.reload();
             } else {
                 location.href = location.href.split("#")[0];
-                document.getElementById(idErreur).parentElement.classList.remove("fullscreen");
+                document.getElementById(idErreur).parentElement.parentElement.classList.remove("fullscreen");
             }
         }
     </script>
