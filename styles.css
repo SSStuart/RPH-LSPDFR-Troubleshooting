@@ -5,30 +5,63 @@
     --SECONDARY-green: #67af4a;
 }
 
+[data-theme="auto"] {
+	color-scheme: light dark;
+}
+[data-theme="dark"] {
+	color-scheme: dark;
+}
+[data-theme="light"] {
+	color-scheme: light;
+}
+
 @media (prefers-color-scheme: dark) {
-    :root {
+    [data-theme="auto"]:root {
         color-scheme: dark;
     }
 
-    .icon {
+    [data-theme="auto"] .icon {
         filter: invert(1);
     }
-    a:hover {
+    [data-theme="auto"] a:hover {
         color: var(--PRIMARY-light) !important;
     }
-    details {
+    [data-theme="auto"] details {
         background-color: #fff1 !important;
     }
-    details.fullscreen {
+    [data-theme="auto"] details.fullscreen {
         background-color: #222 !important;
     }
-    a.etiquette {
+    [data-theme="auto"] a.etiquette {
         color: #222;
     }
-    a.etiquette:hover {
+    [data-theme="auto"] a.etiquette:hover {
         background-color: var(--PRIMARY-light);
         color: var(--PRIMARY-dark);
     }
+}
+[data-theme="dark"]:root {
+    color-scheme: dark;
+}
+
+[data-theme="dark"] .icon {
+    filter: invert(1);
+}
+[data-theme="dark"] a:hover {
+    color: var(--PRIMARY-light) !important;
+}
+[data-theme="dark"] details {
+    background-color: #fff1 !important;
+}
+[data-theme="dark"] details.fullscreen {
+    background-color: #222 !important;
+}
+[data-theme="dark"] a.etiquette {
+    color: #222;
+}
+[data-theme="dark"] a.etiquette:hover {
+    background-color: var(--PRIMARY-light);
+    color: var(--PRIMARY-dark);
 }
 
 html {
