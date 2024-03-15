@@ -48,7 +48,7 @@
     filter: invert(1);
 }
 [data-theme="dark"] a:hover {
-    color: var(--PRIMARY-light) !important;
+    color: var(--PRIMARY-light);
 }
 [data-theme="dark"] details {
     background-color: #fff1 !important;
