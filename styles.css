@@ -321,6 +321,10 @@ a.etiquette {
     color: #fff;
     padding-inline: 4px;
     text-decoration: none;
+    border: 1px solid #888;
+    padding-block: 2px;
+    display: inline-block;
+    margin: 1px;
 }
 a.etiquette:hover {
     background-color: var(--PRIMARY-dark);
