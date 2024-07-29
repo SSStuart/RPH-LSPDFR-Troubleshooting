@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles.css?v=1.1">
+    <link rel="stylesheet" type="text/css" href="../styles.css?v=1.2">
     <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
     <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
     <meta property="og:description" content="Résolution de problèmes communs pour RPH/LSPDFR">
@@ -22,22 +22,39 @@
     </header>
     
 
-    <section style="padding-left: 2em;">
-        <div class="stepsNavCont">
-            <button id="btnPrevStep" onclick="gotoStep(-1)" disabled="disabled"><i class='iiicon' data-name='arrowUp'>/\</i><span class="btnStepName"> Précédent</span></button>
-            <button id="btnNextStep" onclick="gotoStep(1)"><i class='iiicon' data-name='arrowDown'>\/</i><span class="btnStepName"> Suivant</span></button>
-        </div>
+    <section>
         <p>Si les autorisations utilisateur du dossier du jeu ne sont pas suffisante certains fichiers peuvent être <em>bloquées</em> et ne seront pas utilisable par le jeu.</p>
         <p>L'installation de certains mods et certains autres événements peuvent modifier ces autorisations, vérifier donc régulièrement que vous avez les autorisations nécessaires :</p>
+        <div class="stepsNavCont">
+            <button id="btnPrevStep" onclick="gotoStep(-1)" disabled="disabled"><i class='iiicon' data-name='arrowLeft'>←</i><span class="btnStepName"> Précédent</span></button>
+            <button id="btnNextStep" onclick="gotoStep(1)"><span class="btnStepName"> Suivant</span><i class='iiicon' data-name='arrowRight'>→</i></button>
+        </div>
         <ol class="steps">
-            <li class="current">Faites un clic-droit sur le dossier du jeu (<i class="iiicon" data-name="warning"></i> Cela ne fonctionnera pas sur un raccourci vers le dossier) puis cliquez sur "Propriétés"<br>
-                <img class="imgError" src="pictures/Autorisations1.png" alt="" tabindex="0">
+            <li class="current" data-step-nb="1">
+                <div class="stepExplanation">
+                    Faites un clic-droit sur le dossier du jeu, puis cliquez sur "Propriétés"
+                    <span class="stepNote"><i class="iiicon" data-name="warning"></i> Cela ne fonctionnera pas sur un raccourci vers le dossier</span>
+                </div>
+                <div class="stepImgCont">
+                    <img class="imgError" src="pictures/Autorisations1.png" alt="" tabindex="0">
+                </div>
             </li>
-            <li>Allez sur l'onglet "Sécurité", puis cliquez sur "Modifier..."<br>
-                <img class="imgError" src="pictures/Autorisations2.png" alt="" tabindex="0">
+            <li data-step-nb="2">
+                <div class="stepExplanation">
+                    Allez sur l'onglet "Sécurité", puis cliquez sur "Modifier..."
+                </div>
+                <div class="stepImgCont">
+                    <img class="imgError" src="pictures/Autorisations2.png" alt="" tabindex="0">
+                </div>
             </li>
-            <li>Sélectionnez "Utilisateurs (...)", puis cochez la case "Autoriser" pour le "Contrôle total" et cliquez sur "Appliquer" (si la case est déjà cochée, décochez puis recochez la case)<br>
-                <img class="imgError" src="pictures/Autorisations3.png" alt="" tabindex="0">
+            <li data-step-nb="3">
+                <div class="stepExplanation">
+                    Dans la fenêtre qui s'ouvre : Sélectionnez "Utilisateurs (...)", puis cochez la case "Autoriser" pour le "Contrôle total" et cliquez sur "Appliquer".
+                    <span class="stepNote">Si la case est déjà cochée, décochez puis recochez la case</span>
+                </div>
+                <div class="stepImgCont">
+                    <img class="imgError" src="pictures/Autorisations3.png" alt="" tabindex="0">
+                </div>
             </li>
         </ol>
     </section>
@@ -69,12 +86,17 @@
                 btnNext.disabled = false;
 
             document.querySelectorAll('.steps li').forEach((el, i) => {
-                if (i == currentStep) {
-                    el.classList.add('current');
-                    el.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+                if (i == currentStep)
+                    setTimeout(() => {
+                        el.classList.add('current');
+                    }, 250);
+                else {
+                    el.classList.add('currentOld');
+                    setTimeout(() => {
+                        el.classList.remove('currentOld');
+                        el.classList.remove('current');
+                    }, 250);
                 }
-                else
-                    el.classList.remove('current');
             });
         }
     </script>

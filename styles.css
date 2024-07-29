@@ -364,23 +364,58 @@ footer {
 .steps > li {
     font-size: 1.3em;
     margin-bottom: 1em;
-    transition: 500ms;
-    /*opacity: 0.3;
-    filter: grayscale(1);*/
+    display: none;
+}
+.steps > li::before {
+    content: attr(data-step-nb) " ";
+    background-color: var(--PRIMARY-dark);
+    display: inline-flex;
+    justify-content: center;
+    width: 2em;
+    margin-right: 1ch;
+    border-radius: 200px;
+    font-size: 200%;
 }
 .steps > li.current {
-    opacity: 1;
-    filter: grayscale(0);
+    animation: fadeIn 250ms both 250ms;
+    display: block;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+.steps > li.currentOld {
+    animation: fadeOut 250ms both;
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+.stepExplanation {
+    margin-bottom: 1em;
+}
+.stepNote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1ch;
+    padding: 10px;
+    margin-block: 20px;
+    background-color: #FF02;
+    border: solid #FF04 1px;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 80%;
 }
 
 .stepsNavCont {
-    position: fixed;
-    top: 50%;
-    translate: translateY(-50%);
-    left: 0;
-    z-index: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 .stepsNavCont > button {
     font-size: 2em;
@@ -391,7 +426,7 @@ footer {
     text-align: left;
     transition: 250ms;
 }
-.stepsNavCont > button:hover {
+.stepsNavCont > button:hover:not(:disabled) {
     background-color: var(--PRIMARY-dark);
 }
 .stepsNavCont > button:disabled {
@@ -399,19 +434,124 @@ footer {
     cursor: not-allowed;
 }
 #btnPrevStep {
-    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
 }
 #btnNextStep {
+    border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
 }
-.btnStepName {
-    max-height: 1em;
-    display: inline-block;
-    overflow: hidden;
-    animation: disapear 1s ease-in-out 2s forwards;
+
+.steps > li .stepImgCont {
+    position: relative;
+    width: fit-content;
 }
-@keyframes disapear {
-    0% {font-size: 1em;}
-    100% {font-size: 0;}
-    
+.steps > li .stepImgCont::before {
+    content: "";
+    background-color: var(--PRIMARY-green);
+    opacity: 0.8;
+    display: block;
+    height: 1em;
+    width: 1em;
+    border-radius: 2em;
+    position: absolute;
+    z-index: 2;
+}
+.steps > li[data-step-nb="1"] .stepImgCont::before {
+    animation: stepOneIndicator 4s infinite;
+}
+@keyframes stepOneIndicator {
+    10%, 30%, 70%, 90% {
+        border: solid 3px transparent;
+    }
+    20%, 80% {
+        border: solid 3px var(--PRIMARY-dark);
+    }
+    0% {
+        opacity: 0;
+        right: 10%;
+        top: 5%;
+    }
+    10%, 30% {
+        opacity: 1;
+        right: 10%;
+        top: 5%;
+    }
+    70%, 90% {
+        opacity: 1;
+        right: 90%;
+        top: 90%;
+    }
+    100% {
+        opacity: 0;
+        right: 90%;
+        top: 90%;
+    }
+}
+.steps > li[data-step-nb="2"] .stepImgCont::before {
+    animation: stepTwoIndicator 4s infinite;
+}
+@keyframes stepTwoIndicator {
+    10%, 30%, 70%, 90% {
+        border: solid 3px transparent;
+    }
+    20%, 80% {
+        border: solid 3px var(--PRIMARY-dark);
+    }
+    0% {
+        opacity: 0;
+        right: 70%;
+        top: 8%;
+    }
+    10%, 30% {
+        opacity: 1;
+        right: 70%;
+        top: 8%;
+    }
+    70%, 90% {
+        opacity: 1;
+        right: 10%;
+        top: 42%;
+    }
+    100% {
+        opacity: 0;
+        right: 10%;
+        top: 42%;
+    }
+}
+.steps > li[data-step-nb="3"] .stepImgCont::before {
+    animation: stepThreeIndicator 4s infinite;
+}
+@keyframes stepThreeIndicator {
+    10%, 20%, 45%, 55%, 80%, 90% {
+        border: solid 3px transparent;
+    }
+    15%, 50%, 85% {
+        border: solid 3px var(--PRIMARY-dark);
+    }
+    0% {
+        opacity: 0;
+        right: 70%;
+        top: 35%;
+    }
+    10%, 20% {
+        opacity: 1;
+        right: 70%;
+        top: 35%;
+    }
+    45%, 55% {
+        opacity: 1;
+        right: 30%;
+        top: 65%;
+    }
+    80%, 90% {
+        opacity: 1;
+        right: 10%;
+        top: 92%;
+    }
+    100% {
+        opacity: 0;
+        right: 10%;
+        top: 90%;
+    }
 }
