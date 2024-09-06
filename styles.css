@@ -368,7 +368,8 @@ footer {
 }
 .steps > li::before {
     content: attr(data-step-nb) " ";
-    background-color: var(--PRIMARY-dark);
+    background-color: var(--PRIMARY-green);
+    color: #FFF;
     display: inline-flex;
     justify-content: center;
     width: 2em;
