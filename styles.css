@@ -83,13 +83,17 @@ header {
     align-items: center;
     gap: 1ch;
 }
-body[data-subject-theme="RPH"] header {
+body[data-subject-theme="RPH"] header,
+#RPHSectionTitle {
     background-color: #fcaf17;
 }
-body[data-subject-theme="LSPDFR"] header {
+
+body[data-subject-theme="LSPDFR"] header,
+#LSPDFRSectionTitle {
     background-color: #226df5;
 }
-body[data-subject-theme="OpenIV"] header {
+body[data-subject-theme="OpenIV"] header,
+#OpenIVSectionTitle {
     background-color: #ccad58;
 }
 
@@ -203,6 +207,13 @@ h3 {
 
 abbr {
     cursor: help;
+}
+
+#RPHSectionTitle,
+#LSPDFRSectionTitle,
+#OpenIVSectionTitle {
+    color: #FFF;
+    padding: 1em;
 }
 
 .issueLinkList {
