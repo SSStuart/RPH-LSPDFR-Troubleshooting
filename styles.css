@@ -78,8 +78,9 @@ header {
     background-color: var(--PRIMARY-green);
     color: #fff;
     padding: 10px;
-    padding-left: calc(4vh + 20px);
     font-size: 4vh;
+    display: flex;
+    gap: 1ch;
 }
 
 #navOverlay {
@@ -273,10 +274,11 @@ section div details {
     transition: max-height 1s ;
 }
 
-details {
+.detailsInnerContainer {
+    padding: 1em;
     background-color: #0001;
-    padding: 10px;
-    padding-left: 20px;
+    max-width: 150ch;
+    margin: auto;
 }
 
 summary {
@@ -297,11 +299,6 @@ summary {
 
 .fullscreen .fullscreenBtn {
     position: fixed;
-}
-
-.detailsInnerContainer {
-    max-width: 150ch;
-    margin: auto;
 }
 
 code {
