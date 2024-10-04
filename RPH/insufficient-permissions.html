@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css?v=4.2">
+    <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
+    <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
+    <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
+
+    <title>RPH/LSPDFR Troubleshooting</title>
+    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
+    <meta property="og:description" content="Version du jeu incompatible pour RAGE Plugin Hook">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
+    <meta name="theme-color" content="#4aaf60">
+</head>
+<body>
+    <header>
+        <a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="home"></i></a>
+        <div><i class="iiicon" data-name="wrench"></i> Résolution de problèmes communs pour <span style="color: #fcaf17;">Rage Plugin Hook</span> & <span style="color: #226df5;">LSPDFR</span></div>
+    </header>
+
+    <section>
+        <h2 class="typeErreur">Permissions insuffisantes ou mauvais antivirus</h2>
+        <div class="detailsInnerContainer">
+            <div class="contDefErreur"  id="insufficientPerm">
+                <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#insufficientPermResolution">[Voir la résolution]</a>
+                <ul>
+                    <li>
+                        <p>
+                            <abbr title="Rage Plugin Hook">RPH</abbr> n'est pas installé au bon endroit.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            L'antivirus bloque des fichiers dans la racine du jeu.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <abbr title="Rage Plugin Hook">RPH</abbr> n'a pas les permissions suffisantes.
+                        </p>
+                    </li>
+                </ul>
+                <div class="imgWithCredit">
+                    <img class="imgError" src="../pictures/RPH_insufficientPerm.png" alt="Could not hook game process. Insufficient permissions or bad anti-virus" tabindex="0">
+                    <span class="credit">(Image de <i>kiwiw#7986</i>)</span>
+                </div>
+            </div>
+            <div class="contResolution" id="insufficientPermResolution">
+                <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
+                <ul>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/one.png" alt="1">
+                        <p>
+                            Vérifiez que <code>RAGEPluginHook.exe</code> est bien placé dans la racine d'origine de votre jeu (et non pas une copie).
+                        </p>
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/two.png" alt="2">
+                        <p>
+                            Dans les paramètres de votre antivirus, ajouter une exception au dossier du jeu.<br>
+                            <a class="etiquette" href="https://support.avast.com/fr-fr/article/Antivirus-scan-exclusions/" target="_blank" style="background-color: #FF7800; color: #FFFFFF;">Avast</a> 
+                            <a class="etiquette" href="https://support.norton.com/sp/fr/fr/home/current/solutions/v3672136" target="_blank" style="background-color: #FEEB2A; color: #242424;">Norton</a>
+                            <a class="etiquette" href="https://www.bitdefender.fr/consumer/support/answer/26042/" target="_blank" style="background-color: #FFFFFF; color: #006EFF;">Bitdefender</a>
+                            <a class="etiquette" href="https://support.microsoft.com/fr-fr/windows/ajouter-une-exclusion-à-sécurité-windows-811816c0-4dfd-af4a-47e4-c301afe13b26" target="_blank" style="background-color: #0078D4; color: #FFFFFF;">Sécurité Windows</a> 
+                            <a class="etiquette" onclick="window.alert('Impossible d\'exclure un dossier avec McAfee...');" style="background-color: #FFFFFF; color: #d1291a; cursor: pointer;">McAfee 🟥</a> 
+                            <a class="etiquette" href="https://www.reddit.com/r/RAVAntivirus/comments/tq31n5/how_to_exclude_files_or_folders_from_rav/" style="background-color: #05143a; color: #FFFFFF;">RAV Endpoint Protection (Reason Cybersecurity) 🟥</a>
+                            <a class="etiquette" href="https://discord.gg/jJu42Kwdtd" style="cursor:help" target="_blank">Vous avez un autre antivirus ? Précisez-le sur le #need-help</a>
+                            <br><span>🟥 : Antivirus non recommandé (basé sur les faux positifs de <abbr title="Rage Plugin Hook">RPH</abbr>)</span>
+                        </p>
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/three.png" alt="3">
+                        <p>
+                            Lancez GTA 5, puis une fois en jeu (mode histoire, prologue fini au minimum) lancez <abbr title="Rage Plugin Hook">RPH</abbr>.
+                        </p>
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/four.png" alt="4">
+                        <p>
+                            Faites un clique-droit sur le dossier du jeu > "Propriétés" > onglet "Sécurité" > "Modifier..." > <strong>pour chaque groupe</strong> (partie haute) cocher la case "Contrôle total" sous "Autoriser", puis "Appliquer".
+                        </p>
+                        <img class="imgError" src="../pictures/RPH_insufficientPermResol.png" alt="" tabindex="0">
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/five.png" alt="5">
+                        <p>
+                            Si vous avez (Nvidia) GeForce Experience : désactivez la "Superposition en jeu" dans les paramètres généraux de l'application GeForce Experience.
+                        </p>
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/six.png" alt="6">
+                        <p>
+                            <abbr title="Rage Plugin Hook">RPH</abbr> <em>peut</em> créer un fichier caché dans la racine qui peut être à l'origine de l'erreur.<br>
+                            Pour le supprimer : lancez un cmd en tant qu'administrateur (<kbd>Windows</kbd> + <kbd>R</kbd>, entrez <code>cmd</code> puis appuyez sur <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>Entrée</kbd>) puis entrez la commande suivante : <code>del <span style="color: var(--PRIMARY-green);">[Chemin de la racine]</span>\rphhs</code>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Créer par <a href="https://discord.com/users/238171985127931905" target="_blank">ssstuart</a> pour le #need-help. Mis à jour le <span id="dateAuto">01 janvier 2023</span></p> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="../pictures/NHCCertified.png" alt="NHC Certified"></a>
+    </footer>
+    <script>
+        var lastEditDate = new Date(document.lastModified);
+        document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
+    </script>
+</body>
+</html>

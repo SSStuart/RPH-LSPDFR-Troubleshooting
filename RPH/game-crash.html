@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css?v=4.2">
+    <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
+    <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
+    <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
+
+    <title>RPH/LSPDFR Troubleshooting</title>
+    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
+    <meta property="og:description" content="Version du jeu incompatible pour RAGE Plugin Hook">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
+    <meta name="theme-color" content="#4aaf60">
+</head>
+<body>
+    <header>
+        <a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="home"></i></a>
+        <div><i class="iiicon" data-name="wrench"></i> Résolution de problèmes communs pour <span style="color: #fcaf17;">Rage Plugin Hook</span> & <span style="color: #226df5;">LSPDFR</span></div>
+    </header>
+
+    <section>
+        <h2 class="typeErreur"><abbr title="Rage Plugin Hook">RPH</abbr>/GTA 5 a crashé</h2>
+        <div class="detailsInnerContainer">
+            <div class="contDefErreur"  id="gameCrashed">
+                <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#gameCrashedResolution">[Voir la résolution]</a>
+                <p>
+                    <abbr title="Rage Plugin Hook">RPH</abbr> a fait crasher le jeu.
+                </p>
+                <img class="imgError" src="../pictures/RPH_crash1.png" alt="Grand Theft Auto V has crashed! Please wait while RAGE Plugin Hook generates a crash report." tabindex="0">
+            <br>
+                <img class="imgError" src="../pictures/RPH_crash2.png" alt="The game has crashed. This may be due to a bug in the game itself, in RAGE Plugin Hook, in a plugin, or some outside issue like bad anti-virus or graphics driver, etc." tabindex="0">
+                <br>
+                <img class="imgError" src="../pictures/RPH_crash3.png" alt="(Crash report)" tabindex="0">
+            </div>
+            <div class="contResolution" id="gameCrashedResolution">
+                <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
+                    <p>
+                        Lorsque le message d'erreur de <abbr title="Rage Plugin Hook">RPH</abbr> "The game has crashed!" apparaît, cliquez sur "Generate crash report" (voir 2<sup>ème</sup> image).<br>
+                        Une fois le rapport généré, copiez-le et envoyez-le dans le #need-help.
+                    </p>
+                    <p>
+                        Vous pouvez également essayé les résolutions de l'erreur <a href="#insufficientPermResolution">"Permissions insuffisantes ou mauvais antivirus"</a>.
+                    </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Créer par <a href="https://discord.com/users/238171985127931905" target="_blank">ssstuart</a> pour le #need-help. Mis à jour le <span id="dateAuto">01 janvier 2023</span></p> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="../pictures/NHCCertified.png" alt="NHC Certified"></a>
+    </footer>
+    <script>
+        var lastEditDate = new Date(document.lastModified);
+        document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
+    </script>
+</body>
+</html>

@@ -232,6 +232,8 @@ section div details {
 }
 .contResolution {
     border-left: 5px solid forestgreen;
+    background-color: #228b2222;
+    padding-block: 1em;
 }
 
 .stepEmoji {
