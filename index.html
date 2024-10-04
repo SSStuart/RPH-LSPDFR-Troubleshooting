@@ -57,9 +57,13 @@
         </div>
     </section>
 
-    <template>
-        <button class="fullscreenBtn" onclick="toggleFullscreen(this)" title="Basculer le plein écran"><i class="iiicon" data-name="fullscreen"></i></button>
-    </template>
+    <section>
+        <h1 style="text-decoration: underline 2px #ccad58;">OpenIV</h1>
+        <div class="issueLinkList">
+            <a href="./OpenIV/missing-permissions.html"><h2 class="typeErreur">OpenIV n'as pas les permissions nécessaires</h2></a>
+            <a href="./OpenIV/unable-add-files.html"><h2 class="typeErreur">Impossible d'ajouter des fichiers</h2></a>
+        </div>
+    </section>
     
 
     <footer>
@@ -77,39 +81,26 @@
             
             for (let pair of queryString.entries()) {
                 if (pair[0]=="fullscreen") {
-                    document.getElementById(ErrorString).parentElement.parentElement.classList.add("fullscreen");
-                    document.body.style.overflow = "hidden";
-                    document.getElementById(ErrorString).parentElement.parentElement.open = true;
+                    switch (ErrorString) {
+                        case "unsupportedVersion":
+                            window.location.replace("https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/RPH/incompatible-game-version.html");
+                            break;
+                        case "pluginBlocked":
+                            window.location.replace("https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/LSPDFR/plugin-stopped-loading.html");
+                            break;
+                        case "insufficientPerm":
+                            window.location.replace("https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/RPH/insufficient-permissions.html");
+                            break;
+                        case "permissions":
+                            window.location.replace("https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/OpenIV/........................");
+                            break;
+                        case "addFiles":
+                            window.location.replace("https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/OpenIV/........................");
+                            break;
+                        default:
+                            break;
+                    }
                 }
-            }
-        }
-
-        var btnFSTemp = document.querySelector('template');
-        var erreurs = document.getElementsByClassName('contDefErreur');
-        for (erreur=0; erreur<erreurs.length; erreur++) {
-            erreurs[erreur].appendChild(btnFSTemp.content.cloneNode(true));
-            
-        }
-
-        var menu = document.getElementById('navOverlay');
-        var btnMenu = document.querySelector('#navBtn');
-
-        function toggleNav() {
-            if (menu.classList.contains("open")) {
-                menu.classList.remove("open");
-            } else {
-                menu.classList.add("open");
-            }
-        }
-
-        function toggleFullscreen(element) {
-            idErreur = element.parentElement.id;
-            if (!fullscreen){
-                location.href += "#"+idErreur+"?fullscreen";
-                location.reload();
-            } else {
-                location.href = location.href.split("#")[0];
-                document.getElementById(idErreur).parentElement.parentElement.classList.remove("fullscreen");
             }
         }
     </script>
