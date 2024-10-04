@@ -87,14 +87,22 @@ body[data-subject-theme="RPH"] header,
 #RPHSectionTitle {
     background-color: #fcaf17;
 }
-
+#RPHSectionTitle + .issueLinkList {
+    border-left:  2px solid #fcaf17;
+}
 body[data-subject-theme="LSPDFR"] header,
 #LSPDFRSectionTitle {
     background-color: #226df5;
 }
+#LSPDFRSectionTitle + .issueLinkList {
+    border-left:  2px solid #226df5;
+}
 body[data-subject-theme="OpenIV"] header,
 #OpenIVSectionTitle {
     background-color: #ccad58;
+}
+#OpenIVSectionTitle + .issueLinkList {
+    border-left:  2px solid #ccad58;
 }
 
 #navOverlay {
