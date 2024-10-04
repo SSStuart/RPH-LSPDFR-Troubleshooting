@@ -89,6 +89,9 @@ body[data-subject-theme="RPH"] header {
 body[data-subject-theme="LSPDFR"] header {
     background-color: #226df5;
 }
+body[data-subject-theme="OpenIV"] header {
+    background-color: #ccad58;
+}
 
 #navOverlay {
     position: fixed;
