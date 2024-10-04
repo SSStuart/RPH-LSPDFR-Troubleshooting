@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css?v=4.2">
+    <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
+    <script src="https://ssstuart.net/APIs/WWWidget.js"></script>
+    <script src="https://ssstuart.net/APIs/IIIcons.js"></script>
+
+    <title>RPH/LSPDFR Troubleshooting</title>
+    <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
+    <meta property="og:description" content="Plugin arrêté car il freeze le jeu">
+    <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
+    <meta name="theme-color" content="#4aaf60">
+</head>
+<body data-subject-theme="LSPDFR">
+    <header>
+        <a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="home"></i></a>
+        <div><i class="iiicon" data-name="wrench"></i> Résolution de problèmes communs pour Rage Plugin Hook & LSPDFR</div>
+    </header>
+
+    <section>
+        <h2 class="typeErreur">Plugin arrêté car il <i>freeze</i> le jeu</h2>
+        <div class="detailsInnerContainer">
+            <div class="contDefErreur"  id="pluginBlocked">
+                <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#pluginBlockedResolution">[Voir la résolution]</a>
+                <p>
+                    <abbr title="Rage Plugin Hook">RPH</abbr> arrête un plugin au chargement du jeu parce qu'il bloque ce dernier.
+                </p>
+                <img class="imgError" src="../pictures/RPH_blockedPlugin.png" alt="WARNING! Plugin '...' was terminated because it caused the game to freeze." tabindex="0">
+            </div>
+            <div class="contResolution" id="pluginBlockedResolution">
+                <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
+                <ul>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/one.png" alt="1">
+                        <p>
+                            Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "General".<br>
+                            Changez la valeur de "Plugin timeout threshold" à <code>15000</code> (15 secondes).<br>
+                            (Dans tous les cas, pensez à garder la fenêtre du jeu au premier plan pendant le chargement)
+                        </p>
+                    </li>
+                    <li>
+                        Option <img class="stepEmoji" src="../pictures/steps/two.png" alt="2">
+                        <p>
+                            Allez dans les paramètres de <abbr title="Rage Plugin Hook">RPH</abbr> dans l'onglet "Plugins".<br>
+                            Sélectionnez "Don't load any plugins on startup".<br>
+                            Une fois en jeu, ouvrez la console <abbr title="Rage Plugin Hook">RPH</abbr> (<kbd>F4</kbd> par défaut), puis écrivez <code style="background-color: #002871a8; color: lightcyan">ReloadAllPlugins</code>.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Créer par <a href="https://discord.com/users/238171985127931905" target="_blank">ssstuart</a> pour le #need-help. Mis à jour le <span id="dateAuto">01 janvier 2023</span></p> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img id="certified" src="../pictures/NHCCertified.png" alt="NHC Certified"></a>
+    </footer>
+    <script>
+        var lastEditDate = new Date(document.lastModified);
+        document.getElementById('dateAuto').innerText = lastEditDate.toLocaleDateString();
+    </script>
+</body>
+</html>

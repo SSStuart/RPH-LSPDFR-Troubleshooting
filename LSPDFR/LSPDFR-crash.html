@@ -11,31 +11,36 @@
 
     <title>RPH/LSPDFR Troubleshooting</title>
     <meta property="og:title" content="RPH/LSPDFR Troubleshooting">
-    <meta property="og:description" content="Changer le raccourci clavier de la console RPH">
+    <meta property="og:description" content="Plugin arrêté car il freeze le jeu">
     <meta property="og:url" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/pictures/NHCCertified.png" />
     <meta name="theme-color" content="#4aaf60">
 </head>
-<body data-subject-theme="RPH">
+<body data-subject-theme="LSPDFR">
     <header>
         <a id="linkHome" href="https://ssstuart.github.io/RPH-LSPDFR-Troubleshooting/"><i class="iiicon" data-name="home"></i></a>
         <div><i class="iiicon" data-name="wrench"></i> Résolution de problèmes communs pour Rage Plugin Hook & LSPDFR</div>
     </header>
 
     <section>
-        <h2 class="typeErreur">Changer le raccourci clavier de la console <abbr title="Rage Plugin Hook">RPH</abbr></h2>
+        <h2 class="typeErreur">LSPDFR a crashé</h2>
         <div class="detailsInnerContainer">
-            <div class="contDefErreur"  id="consoleKeySaving">
-                <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#consoleKeySavingResolution">[Voir la résolution]</a>
+            <div class="contDefErreur"  id="crashed">
+                <h3 class="hErreur"><i class="iiicon" data-name="warning"></i> Erreur</h3> <a class="gotoResol" href="#crashedResolution">[Voir la résolution]</a>
                 <p>
-                    Le changement du raccourci clavier de la console n'est pas enregistré/appliqué.
+                    LSPDFR crash (mais pas le jeu).
                 </p>
+                <img class="imgError" src="../pictures/LSPDFR_crashed.png" alt="LSPD First Response has crashed!" tabindex="0">
             </div>
-            <div class="contResolution" id="consoleKeySavingResolution">
+            <div class="contResolution" id="crashedResolution">
                 <h3 class="hResolu"><i class="iiicon" data-name="wrench"></i> Résolution</h3>
                 <p>
-                    Lancez GTA 5 (via <abbr title="Rage Plugin Hook">RPH</abbr>), puis une fois en jeu, ouvrez la console (<kbd>F4</kbd> par défaut) et écrivez <code style="background-color: #002871a8; color: lightcyan">ConsoleKey F5</code> (en remplaçant 'F5' par la touche désirée).
+                    Ce type d'erreur peut avoir plusieurs causes (en général lié à un plugin qui ne fonctionne pas).
+                </p>
+                <p>
+                    Ouvrez la console <abbr title="Rage Plugin Hook">RPH</abbr> (<kbd>F4</kbd> par défaut), agrandissez-la (en "tirant" le bas de la console vers le bas) puis faites une capture d'écran.<br>
+                    Envoyez la capture d'écran dans le #need-help.
                 </p>
             </div>
         </div>

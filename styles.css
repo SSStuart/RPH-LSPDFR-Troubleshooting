@@ -82,6 +82,12 @@ header {
     display: flex;
     gap: 1ch;
 }
+body[data-subject-theme="RPH"] header {
+    background-color: #fcaf17;
+}
+body[data-subject-theme="LSPDFR"] header {
+    background-color: #226df5;
+}
 
 #navOverlay {
     position: fixed;
