@@ -227,6 +227,7 @@ abbr {
 .issueLinkList {
     display: flex;
     flex-direction: column;
+    padding-left: 2ch;
 }
 .issueLinkList a:hover {
     background-color: #8882;
