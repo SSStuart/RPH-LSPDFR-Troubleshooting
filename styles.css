@@ -203,6 +203,11 @@ abbr {
     cursor: help;
 }
 
+.issueLinkList {
+    display: flex;
+    flex-direction: column;
+}
+
 section div details {
     margin: 20px 0;
 }
