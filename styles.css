@@ -80,6 +80,7 @@ header {
     padding: 10px;
     font-size: 4vh;
     display: flex;
+    align-items: center;
     gap: 1ch;
 }
 body[data-subject-theme="RPH"] header {
@@ -354,16 +355,16 @@ footer {
 
 #linkHome {
     color: #fff;
-    background-color: var(--PRIMARY-dark);
-    height: 1.5em;
-    width: 1.5em;
-    display: inline-block;
+    border: 2px solid;
     text-align: center;
+    transition: 500ms;
+    padding: 10px;
+    display: flex;
     transition: 500ms;
 }
 #linkHome:hover,
 #linkHome:focus {
-    background-color: var(--PRIMARY-light);
+    background-color: #FFF8;
 }
 
 .steps > li {
