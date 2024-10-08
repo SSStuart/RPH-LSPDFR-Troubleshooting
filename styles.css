@@ -341,8 +341,9 @@ summary {
 }
 
 code {
-    padding: 2px;
-    box-shadow: inset 0 0 7px #0008;
+    padding: 2px 5px;
+    box-shadow: inset 0 0 3px #0002;
+    background-color: #8882;
 }
 
 kbd {
