@@ -461,7 +461,8 @@ footer {
     color: #fff;
     border: solid #0003 3px;
     cursor: pointer;
-    text-align: left;
+    display: flex;
+    align-items: center;
     transition: 250ms;
 }
 .stepsNavCont > button:hover:not(:disabled) {
